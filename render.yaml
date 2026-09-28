@@ -5,7 +5,7 @@ services:
     name: careerpilot-app
     env: node
     plan: free
-    buildCommand: npm run render-build
+    buildCommand: npm run build
     startCommand: npm start
     healthCheckPath: /api/health
     envVars:
