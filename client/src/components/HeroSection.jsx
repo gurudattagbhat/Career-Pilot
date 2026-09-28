@@ -83,7 +83,7 @@ export default function HeroSection({
 
         {/* Secure OTP Authentication Highlight for Visitors */}
         {!currentUser && onOpenAuth && (
-          <div style={{
+          <div className="hero-auth-badge" style={{
             display: 'inline-flex',
             alignItems: 'center',
             gap: '10px',

@@ -11,8 +11,7 @@ router.get('/', async (req, res) => {
     if (req.user) {
       return res.json(req.user.applications || []);
     }
-    const apps = await dbService.getApplications();
-    res.json(apps);
+    return res.json([]);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

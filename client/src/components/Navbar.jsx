@@ -95,7 +95,7 @@ export default function Navbar({
             }}>
               CareerPilot <span style={{ color: 'var(--accent-emerald)', fontSize: '0.9rem', fontWeight: 600 }}>PRO</span>
             </div>
-            <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '-3px' }}>
+            <div className="nav-brand-subtitle" style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '-3px' }}>
               Multi-Source Job Engine & ATS Doctor
             </div>
           </div>
@@ -215,11 +215,11 @@ export default function Navbar({
 
           {/* Authentication State Controls */}
           {!currentUser ? (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <div className="nav-auth-buttons" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <button
                 type="button"
                 onClick={() => onOpenAuth('login')}
-                className="btn btn-secondary btn-sm"
+                className="btn btn-secondary btn-sm nav-btn-login"
                 style={{ gap: '6px' }}
               >
                 <LogIn size={15} />
@@ -229,7 +229,7 @@ export default function Navbar({
               <button
                 type="button"
                 onClick={() => onOpenAuth('signup')}
-                className="btn btn-primary btn-sm"
+                className="btn btn-primary btn-sm nav-btn-signup"
                 style={{ gap: '6px', padding: '8px 14px' }}
               >
                 <UserPlus size={15} />

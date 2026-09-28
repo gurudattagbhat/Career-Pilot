@@ -239,7 +239,7 @@ Education: ${(profileData.education || []).map(ed => `${ed.degree} from ${ed.ins
   }
 });
 
-// Get currently saved profile (per-user if logged in)
+// Get currently saved profile (strictly per-user if logged in)
 router.get('/profile', async (req, res) => {
   try {
     if (req.user) {
@@ -252,9 +252,8 @@ router.get('/profile', async (req, res) => {
       });
     }
 
-    const profile = await dbService.getProfile();
-    const latestAts = await dbService.getLatestAtsAnalysis();
-    res.json({ profile, latestAts });
+    // Do NOT return someone else's stored profile when no user is logged in
+    return res.json({ profile: null, latestAts: null, user: null });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -263,9 +262,9 @@ router.get('/profile', async (req, res) => {
 // Re-run ATS analysis with specific target role
 router.post('/analyze-ats', async (req, res) => {
   try {
-    const { targetRole, resumeText } = req.body;
+    const { targetRole, resumeText } = req.body || {};
     const apiKey = getGroqKey(req);
-    const profile = (req.user && req.user.resumeProfile) ? req.user.resumeProfile : (await dbService.getProfile());
+    const profile = req.user?.resumeProfile || null;
 
     const textToAnalyze = resumeText || (profile ? JSON.stringify(profile) : '');
     if (!textToAnalyze || textToAnalyze.length < 20) {

@@ -23,7 +23,7 @@ async function resolveUserProfile(req) {
       experienceLevel: req.user.experienceLevel
     };
   }
-  return await dbService.getProfile();
+  return null;
 }
 
 // Get jobs with real-time scraping, filtering, search, sorting & pagination
@@ -106,8 +106,7 @@ router.get('/saved', async (req, res) => {
     if (req.user) {
       return res.json(req.user.savedJobs || []);
     }
-    const saved = await dbService.getSavedJobs();
-    res.json(saved);
+    return res.json([]);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

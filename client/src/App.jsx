@@ -131,19 +131,33 @@ export default function App() {
 
   // Load user customized data from backend / MongoDB Atlas
   const loadUserData = useCallback(async () => {
+    const token = localStorage.getItem('jobfinder_auth_token');
+    if (!token) {
+      setProfile(null);
+      setAtsData(null);
+      setCurrentUser(null);
+      setSavedJobs([]);
+      setApplications([]);
+      return;
+    }
+
     try {
       // 1. Fetch Profile & latest ATS
       const profileData = await api.getCandidateProfile();
-      if (profileData.profile) {
+      if (profileData && profileData.profile) {
         setProfile(profileData.profile);
         if (profileData.profile.targetRole || profileData.profile.headline) {
           setTargetRole(profileData.profile.targetRole || profileData.profile.headline);
         }
+      } else {
+        setProfile(null);
       }
-      if (profileData.latestAts) {
+      if (profileData && profileData.latestAts) {
         setAtsData(profileData.latestAts);
+      } else {
+        setAtsData(null);
       }
-      if (profileData.user) {
+      if (profileData && profileData.user) {
         setCurrentUser(profileData.user);
         localStorage.setItem('jobfinder_auth_user', JSON.stringify(profileData.user));
         if (profileData.user.targetRole) {
@@ -154,10 +168,12 @@ export default function App() {
       // 2. Fetch Saved Bookmarks
       const saved = await api.getSavedJobs();
       if (Array.isArray(saved)) setSavedJobs(saved);
+      else setSavedJobs([]);
 
       // 3. Fetch Tracked Applications
       const apps = await api.getApplications();
       if (Array.isArray(apps)) setApplications(apps);
+      else setApplications([]);
     } catch (err) {
       console.warn('Initial data load note:', err.message);
     }
@@ -1116,32 +1132,22 @@ export default function App() {
           fetchJobs(1, true);
         }}
       />
+      {/* Floating Interactive Toast Feedback */}
+      {toastMessage && (
+        <div className="floating-toast animate-slide-up" role="status" aria-live="polite">
+          <Sparkles size={16} color="var(--accent-emerald)" />
+          <span>{toastMessage}</span>
+        </div>
+      )}
+
       {/* Floating Back to Top Button */}
       {showScrollTop && (
         <button
           type="button"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="btn btn-secondary"
-          style={{
-            position: 'fixed',
-            bottom: '24px',
-            right: toastMessage ? '220px' : '24px',
-            zIndex: 190,
-            borderRadius: '50%',
-            width: '46px',
-            height: '46px',
-            padding: 0,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: 'var(--bg-card)',
-            border: '1px solid var(--accent-emerald)',
-            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.4)',
-            color: 'var(--accent-emerald)',
-            cursor: 'pointer',
-            transition: 'all 0.2s ease'
-          }}
+          className="floating-scroll-top"
           title="Back to Top"
+          aria-label="Back to top"
         >
           <ArrowUp size={20} />
         </button>

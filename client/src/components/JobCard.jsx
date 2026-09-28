@@ -239,7 +239,7 @@ export default function JobCard({
       </div>
 
       {/* Action Buttons Row */}
-      <div style={{
+      <div className="job-card-actions" style={{
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -249,7 +249,7 @@ export default function JobCard({
         flexWrap: 'wrap'
       }}>
         {/* AI Actions */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+        <div className="job-card-ai-actions" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
           <button
             onClick={(e) => {
               e.stopPropagation();
@@ -286,7 +286,7 @@ export default function JobCard({
             e.stopPropagation();
             if (onTrackApplied) onTrackApplied(job);
           }}
-          className="btn btn-primary btn-sm"
+          className="btn btn-primary btn-sm job-card-apply-btn"
           style={{ gap: '6px', fontSize: '0.82rem', textDecoration: 'none' }}
           title={`Directly opens official job application on ${job.source || 'portal'}`}
         >
