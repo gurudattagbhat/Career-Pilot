@@ -1,0 +1,26 @@
+{
+  "name": "job-finder-server",
+  "version": "1.0.0",
+  "description": "Backend API for Job Finder MERN stack app with Groq AI integration",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "bcryptjs": "^3.0.3",
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "job-finder-mern": "file:..",
+    "jsonwebtoken": "^9.0.3",
+    "mammoth": "^1.8.0",
+    "mongoose": "^8.9.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^10.0.11",
+    "pdf-parse": "^1.1.1"
+  }
+}

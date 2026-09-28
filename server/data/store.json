@@ -1,0 +1,908 @@
+{
+  "profile": {
+    "personalInfo": {
+      "name": "Gurudatta Ganapati Bhat",
+      "email": "gurugbhat27@gmail.com",
+      "phone": "9481411897",
+      "location": "Yellapur, Karnataka",
+      "portfolio": "",
+      "linkedin": "https://linkedin.com/in/gurudattagbhat",
+      "github": "https://github.com/gurudattagbhat",
+      "headline": "MCA Student & Full‑Stack Developer",
+      "summary": "Motivated Master of Computer Applications student with solid foundations in Python, Java, and C, complemented by hands‑on full‑stack web development experience. Proven ability to design, build, and deploy end‑to‑end applications using modern frameworks and databases, while continuously expanding expertise through coursework from top institutions and industry certifications."
+    },
+    "skills": {
+      "technical": [
+        "Python",
+        "Java",
+        "C",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Node.js",
+        "React.js",
+        "MongoDB",
+        "MySQL",
+        "SQLite",
+        "VS Code",
+        "GitHub",
+        "Jupyter",
+        "Figma",
+        "Streamlit",
+        "Cursor",
+        "NetBeans"
+      ],
+      "frameworks": [
+        "Node.js",
+        "React.js",
+        "Spring Boot",
+        "Flask"
+      ],
+      "databases": [
+        "MongoDB",
+        "MySQL",
+        "SQLite"
+      ],
+      "cloudAndDevops": [],
+      "softSkills": []
+    },
+    "experience": [
+      {
+        "company": "1M1B (Green Skills Academy)",
+        "role": "Intern",
+        "location": "Remote",
+        "duration": "02/2026 – 03/2026",
+        "bullets": [
+          "Completed a green‑skills internship delivered in partnership with AICTE and supported by Salesforce, focusing on sustainability‑driven skill building and applied project work"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "MCA (Master of Computer Applications)",
+        "institution": "Alliance University, Bangalore, India",
+        "year": "2025 – Present",
+        "gpa": "Sem1 SGPA: 8.9, Sem2 SGPA: 8.2"
+      },
+      {
+        "degree": "BCA (Bachelor of Computer Applications)",
+        "institution": "JSS SMI UG and PG Studies",
+        "year": "2025",
+        "gpa": "87.98%"
+      },
+      {
+        "degree": "Higher Secondary Certificate (HSC)",
+        "institution": "YTSS PU College, Yellapur, Karnataka",
+        "year": "2022",
+        "gpa": "69%"
+      },
+      {
+        "degree": "Secondary School Leaving Certificate (SSLC)",
+        "institution": "Govt. High School, Nandolli, Yellapur, Karnataka",
+        "year": "2020",
+        "gpa": "82.56%"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Local Handz – Home Services Platform",
+        "description": "Full‑stack web application connecting customers with local, verified service providers, featuring service discovery, booking, and provider profiles to streamline finding trustworthy local help.",
+        "techStack": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Node.js",
+          "React.js",
+          "MongoDB"
+        ],
+        "link": ""
+      },
+      {
+        "name": "Community Recycling Marketplace",
+        "description": "Flask + SQLite web application for a community green initiative, enabling residents to list, discover, and exchange recyclable materials to promote neighborhood‑level waste reduction.",
+        "techStack": [
+          "Flask",
+          "SQLite",
+          "Python"
+        ],
+        "link": ""
+      },
+      {
+        "name": "CollabSpace",
+        "description": "Real‑time collaborative workspace built with Spring Boot, WebSocket messaging, and MySQL, allowing multiple users to communicate and work together instantly in a shared digital environment.",
+        "techStack": [
+          "Spring Boot",
+          "WebSocket",
+          "MySQL",
+          "Java"
+        ],
+        "link": ""
+      },
+      {
+        "name": "BeFit",
+        "description": "Modern nutrition and wellness tracker that lets users log meals manually or via photo, view weekly/monthly insights, and receive AI‑driven suggestions tailored to their profile.",
+        "techStack": [
+          "Python",
+          "Streamlit"
+        ],
+        "link": ""
+      }
+    ],
+    "certifications": [
+      "Pattern Discovery in Data Mining (University of Illinois)",
+      "Text Retrieval and Search Engines (University of Illinois)",
+      "Data Visualization (University of Illinois)",
+      "Computer Networks and Network Security (IBM)",
+      "Introduction to Artificial Intelligence (IBM)",
+      "Introduction to Software Engineering (IBM)",
+      "Data Analysis with Python (IBM)",
+      "JAVA Programming for Beginners (IBM)",
+      "Quality Improvement and Management (Board Infinity)",
+      "Applied Statistics for Data Analytics (DeepLearning.AI)",
+      "Machine Learning with Python & Statistics (EDUCBA)",
+      "Introduction to Databases (Meta)",
+      "Advanced Data Structures and Algorithms (Packt)",
+      "Introduction to Front‑End Development (Coursera)"
+    ],
+    "rawTextPreview": "\n\nGurudatta Ganapati Bhat \n  gurugbhat27@gmail.com   9481411897   Yellapur, Karnataka   linkedin.com/in/gurudattagbhat \n  github.com/gurudattagbhat   leetcode.com/u/gurugbhat27   hackerrank.com/profile/gurugbhat27 \n \nSUMMARY \nMotivated Master of Computer Applications (MCA) student at Alliance University with a strong foundation in Python, Java, \nand C, and hands-on experience across full-stack web development (HTML, CSS, JavaScript, Node.js, React.js). Comfortable \nworking with relational and non-relational databases (MongoDB, MySQL, SQLite) and experienced in applying data analysis, \nmachine learning, and rapid-prototyping tools such as Streamlit and Jupyter to real projects. Has built and deployed multiple \nend-to-end applications spanning web platforms, real-time collaboration tools, and AI-assisted utilities, and has strengthened \nthis foundation through structured coursework from University of Illinois Urbana-Champaign, IBM, Meta, and \nDeepLearning.AI. A fast learner with practica",
+    "fileName": "Gurudatta_Ganapati_Bhat_Resume_Update1_hardcopy.pdf",
+    "updatedAt": "2026-09-27T14:51:41.952Z"
+  },
+  "savedJobs": [],
+  "applications": [
+    {
+      "id": "app_1790356456750_r1m2c",
+      "jobId": "live_insta_433649_5",
+      "jobTitle": "Front End Engineer",
+      "company": "Persistence",
+      "location": "Bangalore, India",
+      "salary": "₹8 LPA – ₹16 LPA (Est. Market CTC)",
+      "applyUrl": "https://www.instahyre.com/job-433649-front-end-engineer-at-persistence-bangalore/",
+      "source": "Instahyre",
+      "status": "applied",
+      "appliedDate": "2026-09-25T17:14:16.750Z",
+      "notes": "",
+      "interviewDate": null,
+      "updatedAt": "2026-09-25T17:14:16.750Z"
+    },
+    {
+      "id": "app_1790356362199_x5mf0",
+      "jobId": "live_insta_395780_12",
+      "jobTitle": "SDE III - Full Stack",
+      "company": "HighLevel",
+      "location": "Work From Home, India",
+      "salary": "₹28 LPA – ₹52 LPA (Est. Market CTC)",
+      "applyUrl": "https://www.instahyre.com/job-395780-sde-iii-full-stack-at-highlevel-work-from-home/",
+      "source": "Instahyre",
+      "status": "applied",
+      "appliedDate": "2026-09-25T17:12:42.199Z",
+      "notes": "",
+      "interviewDate": null,
+      "updatedAt": "2026-09-25T17:12:42.199Z"
+    },
+    {
+      "id": "app_1790356186235_hm7wr",
+      "jobId": "live_insta_442217_27",
+      "jobTitle": "Frontend Engineer",
+      "company": "Big Assets Infra",
+      "location": "Bangalore,Work From Home, India",
+      "salary": "₹8 LPA – ₹16 LPA (Est. Market CTC)",
+      "applyUrl": "https://www.instahyre.com/job-442217-frontend-engineer-at-big-assets-infra-bangalore-work-from-home/",
+      "source": "Instahyre",
+      "status": "applied",
+      "appliedDate": "2026-09-25T17:09:46.235Z",
+      "notes": "",
+      "interviewDate": null,
+      "updatedAt": "2026-09-25T17:09:46.236Z"
+    },
+    {
+      "id": "app_1790356093578_pd35j",
+      "jobId": "live_insta_433344_0",
+      "jobTitle": "Python Developer",
+      "company": "Big Assets Infra",
+      "location": "Bangalore, India",
+      "salary": "₹16 LPA – ₹30 LPA (Competitive CTC)",
+      "applyUrl": "https://www.instahyre.com/job-433344-python-developer-at-big-assets-infra-bangalore/",
+      "source": "Instahyre",
+      "status": "applied",
+      "appliedDate": "2026-09-25T17:08:13.578Z",
+      "notes": "",
+      "interviewDate": null,
+      "updatedAt": "2026-09-25T17:08:30.798Z"
+    },
+    {
+      "id": "app_1790344502839_pnwv0",
+      "jobId": "live_li_10_2_ap9ti0",
+      "jobTitle": "Senior Full-Stack Engineer – AI Developer",
+      "company": "TOCUMULUS",
+      "location": "Mumbai Metropolitan Region",
+      "salary": "₹28 LPA – ₹52 LPA (Est. Market CTC)",
+      "applyUrl": "https://in.linkedin.com/jobs/view/senior-full-stack-engineer-%E2%80%93-ai-developer-at-tocumulus-4458369450",
+      "source": "LinkedIn India",
+      "status": "applied",
+      "appliedDate": "2026-09-25T13:55:02.839Z",
+      "notes": "",
+      "interviewDate": null,
+      "updatedAt": "2026-09-25T13:55:02.839Z"
+    },
+    {
+      "id": "app_1790344489972_41ngc",
+      "jobId": "live_nk_1790344440203_1",
+      "jobTitle": "Senior Full-Stack Engineer (Immediate Joiners Preferred)",
+      "company": "Infosys",
+      "location": "Bengaluru / Hyderabad",
+      "salary": "₹15 LPA – ₹26 LPA",
+      "applyUrl": "https://www.naukri.com/senior-full-stack-engineer-jobs-in-india",
+      "source": "Naukri",
+      "status": "applied",
+      "appliedDate": "2026-09-25T13:54:49.972Z",
+      "notes": "",
+      "interviewDate": null,
+      "updatedAt": "2026-09-25T13:54:49.972Z"
+    },
+    {
+      "id": "app_1790344454589_6eri7",
+      "jobId": "live_nk_1790344440203_0",
+      "jobTitle": "Senior Full-Stack Engineer (Immediate Joiners Preferred)",
+      "company": "Tata Consultancy Services",
+      "location": "Bengaluru / Pune",
+      "salary": "₹14 LPA – ₹24 LPA",
+      "applyUrl": "https://www.naukri.com/senior-full-stack-engineer-jobs-in-india",
+      "source": "Naukri",
+      "status": "applied",
+      "appliedDate": "2026-09-25T13:54:14.589Z",
+      "notes": "",
+      "interviewDate": null,
+      "updatedAt": "2026-09-25T13:54:14.589Z"
+    },
+    {
+      "id": "app_1790271036115_t7yic",
+      "jobId": "live_nk_1790270878836_0",
+      "jobTitle": "Python Java Developer (Immediate Joiners Preferred)",
+      "company": "Tata Consultancy Services",
+      "location": "Bengaluru / Pune",
+      "salary": "₹14 LPA – ₹24 LPA",
+      "applyUrl": "https://www.naukri.com/python-java-developer-jobs-in-india",
+      "source": "Naukri",
+      "status": "applied",
+      "appliedDate": "2026-09-24T17:30:36.115Z",
+      "notes": "",
+      "interviewDate": null,
+      "updatedAt": "2026-09-24T17:30:36.115Z"
+    }
+  ],
+  "atsAnalyses": [
+    {
+      "id": "ats_1790527630212",
+      "timestamp": "2026-09-27T16:47:10.212Z",
+      "overallScore": 65,
+      "rating": "Needs Improvement",
+      "pillars": {
+        "keywordMatch": {
+          "score": 70,
+          "feedback": "Core stack keywords are present (JavaScript, React, Node.js, MongoDB) but many high‑impact terms (AWS, Docker, CI/CD, TypeScript, RESTful API, Agile, testing) are missing."
+        },
+        "quantifiableImpact": {
+          "score": 45,
+          "feedback": "Bullets lack metrics, user counts, performance numbers or business outcomes; ATS sees little evidence of measurable results."
+        },
+        "formattingAndStructure": {
+          "score": 70,
+          "feedback": "Plain‑text layout is readable but dates are missing for projects, sections are uneven, and some fields (portfolio, cloudAndDevops) are empty, which can be flagged."
+        },
+        "skillsAlignment": {
+          "score": 75,
+          "feedback": "Good mix of languages and frameworks for a junior full‑stack role, yet modern ecosystem tools (TypeScript, Next.js, Redux, testing frameworks, cloud platforms) are absent."
+        }
+      },
+      "strengths": [
+        "Strong multi‑language foundation (Python, Java, JavaScript, C).",
+        "Hands‑on full‑stack projects covering front‑end, back‑end, and databases.",
+        "High academic performance (MCA SGPA 8.9/10) and numerous relevant certifications.",
+        "Experience with both relational (MySQL, SQLite) and NoSQL (MongoDB) databases."
+      ],
+      "criticalFixes": [
+        "Add quantifiable results (e.g., users, % performance gain) to every experience and project bullet.",
+        "Insert missing high‑value keywords such as AWS, Docker, CI/CD, TypeScript, RESTful API, Agile, testing frameworks.",
+        "Provide dates and concise bullet points for each project; keep reverse‑chronological order.",
+        "Create a clear Technical Skills matrix with categories and proficiency levels; remove empty arrays.",
+        "Populate or remove the empty portfolio field and ensure all URLs are clickable."
+      ],
+      "missingHighValueKeywords": [
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "TypeScript",
+        "RESTful API",
+        "Agile/Scrum",
+        "Jest or Mocha"
+      ],
+      "bulletPointImprovements": [
+        {
+          "original": "Completed a green‑skills internship delivered in partnership with AICTE and supported by Salesforce, focusing on sustainability‑driven skill building and applied project work",
+          "improved": "Delivered a sustainability‑focused web prototype that reduced manual data entry time by 30% for 50+ users, collaborating with AICTE and Salesforce mentors, and documented the solution in a public GitHub repo",
+          "reason": "Shows concrete impact, quantifies benefit, highlights collaboration and technology use, making the achievement measurable and interview‑ready."
+        }
+      ],
+      "atsRedFlags": [
+        "Missing dates for projects and for the internship beyond month range.",
+        "Empty sections (cloudAndDevops, portfolio) may be interpreted as incomplete.",
+        "Use of non‑standard dash characters (‑) can break parsers.",
+        "Inconsistent education timeline (BCA listed as 2025, same year as MCA start).",
+        "Lack of a concise, keyword‑rich headline beyond \"MCA Student & Full‑Stack Developer\"."
+      ]
+    },
+    {
+      "id": "ats_1790527622544",
+      "timestamp": "2026-09-27T16:47:02.544Z",
+      "overallScore": 68,
+      "rating": "Needs Improvement",
+      "pillars": {
+        "keywordMatch": {
+          "score": 78,
+          "feedback": "Core full‑stack technologies are present, but many modern cloud, container, and CI/CD keywords are missing."
+        },
+        "quantifiableImpact": {
+          "score": 45,
+          "feedback": "Bullets lack metrics, user counts, performance numbers, or business outcomes."
+        },
+        "formattingAndStructure": {
+          "score": 70,
+          "feedback": "Plain text is readable but dates for projects are absent, links are empty, and some sections blend together, which can confuse ATS parsers."
+        },
+        "skillsAlignment": {
+          "score": 75,
+          "feedback": "Strong language and framework mix, yet gaps in DevOps, testing, and cloud services reduce alignment with senior full‑stack expectations."
+        }
+      },
+      "strengths": [
+        "Broad programming foundation across Python, Java, JavaScript, and C.",
+        "Hands‑on full‑stack projects using MERN stack, Flask, and Spring Boot.",
+        "High academic performance (MCA SGPA 8.9/10).",
+        "Extensive certifications from IBM, University of Illinois, Meta, and DeepLearning.AI."
+      ],
+      "criticalFixes": [
+        "Add quantifiable results (e.g., users, response time, revenue impact) to every bullet and project description.",
+        "Insert missing high‑demand keywords such as Docker, Kubernetes, AWS/Azure/GCP, CI/CD, TypeScript, RESTful APIs, testing frameworks, and Agile/Scrum.",
+        "Provide concrete dates and live links (GitHub repo or demo) for each project.",
+        "Reformat to a clean reverse‑chronological layout with clear headings and consistent bullet style.",
+        "Replace vague adjectives with strong action verbs and eliminate non‑standard characters that may hinder parsing."
+      ],
+      "missingHighValueKeywords": [
+        "Docker",
+        "Kubernetes",
+        "AWS (or Azure/GCP)",
+        "CI/CD (GitHub Actions, Jenkins)",
+        "TypeScript",
+        "RESTful API",
+        "GraphQL",
+        "Jest/Cypress (testing)",
+        "Agile/Scrum"
+      ],
+      "bulletPointImprovements": [
+        {
+          "original": "Completed a green‑skills internship delivered in partnership with AICTE and supported by Salesforce, focusing on sustainability‑driven skill building and applied project work",
+          "improved": "Delivered a sustainability‑focused prototype web app during a 2‑month internship, cutting manual data‑entry time by 30% for 50+ users and integrating Salesforce APIs via Agile sprints",
+          "reason": "Shows concrete impact (30% reduction, 50+ users), specifies technology (Salesforce APIs), and uses the X‑Y‑Z formula to demonstrate results."
+        }
+      ],
+      "atsRedFlags": [
+        "Missing dates for projects and certifications make timeline parsing difficult.",
+        "Empty 'link' fields for projects; ATS expects a URL or will treat as missing content.",
+        "Use of non‑ASCII dash characters (‑) can break tokenization.",
+        "One‑line summary blends multiple ideas without clear bullet separation.",
+        "No explicit section headings for Certifications, causing possible omission."
+      ]
+    },
+    {
+      "id": "ats_1790527614625",
+      "timestamp": "2026-09-27T16:46:54.625Z",
+      "overallScore": 64,
+      "rating": "Needs Improvement",
+      "pillars": {
+        "keywordMatch": {
+          "score": 72,
+          "feedback": "Core stack present but many modern keywords missing."
+        },
+        "quantifiableImpact": {
+          "score": 45,
+          "feedback": "Experience and projects lack metrics and outcome statements."
+        },
+        "formattingAndStructure": {
+          "score": 68,
+          "feedback": "Generally readable but missing project dates, empty sections, and special characters hinder ATS parsing."
+        },
+        "skillsAlignment": {
+          "score": 70,
+          "feedback": "Good foundational skills; however cloud, DevOps, testing, and type‑safe languages are absent."
+        }
+      },
+      "strengths": [
+        "Broad programming foundation across Python, Java, JavaScript, and C.",
+        "Hands‑on full‑stack projects showcasing end‑to‑end development with React, Node.js, and Spring Boot.",
+        "Strong academic performance with GPA >8.5 in MCA.",
+        "Extensive certifications from reputable platforms (IBM, University of Illinois, Meta)."
+      ],
+      "criticalFixes": [
+        "Add quantifiable results (users, performance gains, revenue) to all experience and project bullet points.",
+        "Insert missing high‑value keywords such as TypeScript, Docker, AWS, CI/CD, RESTful APIs, testing frameworks, and Agile methodology.",
+        "Provide start‑end dates for each project and format them consistently.",
+        "Populate Cloud/DevOps and Soft Skills sections or remove them to avoid empty fields.",
+        "Clean up special characters and ensure plain‑text formatting for ATS compatibility."
+      ],
+      "missingHighValueKeywords": [
+        "TypeScript",
+        "Docker",
+        "Kubernetes",
+        "AWS (or Azure/GCP)",
+        "CI/CD (GitHub Actions, Jenkins)",
+        "RESTful API design",
+        "Testing frameworks (Jest, Mocha, Cypress)",
+        "Agile/Scrum"
+      ],
+      "bulletPointImprovements": [
+        {
+          "original": "Completed a green‑skills internship delivered in partnership with AICTE and supported by Salesforce, focusing on sustainability‑driven skill building and applied project work",
+          "improved": "Delivered a sustainability‑focused project during a 2‑month internship, increasing participant skill‑assessment scores by 15% and integrating Salesforce APIs to automate reporting for 30+ users",
+          "reason": "Adds concrete metrics, clear action verb, and measurable impact, which ATS and hiring managers prioritize."
+        }
+      ],
+      "atsRedFlags": [
+        "Use of non‑ASCII dash characters (‑) may break parsing.",
+        "Empty CloudAndDevops and SoftSkills arrays signal incomplete sections.",
+        "Projects lack dates and bullet‑point structure, making it hard for ATS to extract details.",
+        "Vague internship bullet without numbers or outcomes.",
+        "Inconsistent date format (02/2026 – 03/2026) and missing month names."
+      ]
+    },
+    {
+      "0": {
+        "overallScore": 68,
+        "rating": "Needs Improvement",
+        "pillars": {
+          "keywordMatch": {
+            "score": 70,
+            "feedback": "Core stack keywords present but many high‑demand terms (TypeScript, Docker, cloud platforms, CI/CD, testing) are missing."
+          },
+          "quantifiableImpact": {
+            "score": 55,
+            "feedback": "Bullets and project descriptions lack metrics, user counts, performance numbers, or business outcomes."
+          },
+          "formattingAndStructure": {
+            "score": 75,
+            "feedback": "Clear sections but missing dates for projects, empty portfolio field, and use of non‑standard hyphens may hinder ATS parsing."
+          },
+          "skillsAlignment": {
+            "score": 70,
+            "feedback": "Good foundation in Python/JavaScript and frameworks, yet gaps in DevOps, cloud, testing, and modern front‑end tooling."
+          }
+        },
+        "strengths": [
+          "Solid multi‑language foundation (Python, Java, JavaScript)",
+          "Hands‑on full‑stack projects spanning MERN and Spring Boot stacks",
+          "Extensive certifications from IBM, University of Illinois, Meta, and DeepLearning.AI",
+          "Strong academic record with high MCA SGPA"
+        ]
+      },
+      "1": "criticalFixes",
+      "2": ":",
+      "3": [
+        "Add quantifiable results (e.g., users, % improvements) to every bullet and project description",
+        "Include start‑end dates for each project to satisfy ATS timeline requirements",
+        "Insert missing high‑value keywords such as TypeScript, Docker, AWS, CI/CD pipelines, Jest, GraphQL, Agile/Scrum",
+        "Populate the cloud/devops skill section with relevant tools (Docker, Kubernetes, AWS, GitHub Actions) or remove the empty field",
+        "Replace the empty portfolio entry with a live link or remove it; ensure consistent plain‑text formatting (avoid special hyphens)"
+      ],
+      "4": "missingHighValueKeywords",
+      "5": ":",
+      "6": [
+        "TypeScript",
+        "Docker",
+        "Kubernetes",
+        "AWS (or Azure/GCP)",
+        "CI/CD (GitHub Actions, Jenkins)",
+        "Jest/React Testing Library",
+        "GraphQL",
+        "Agile/Scrum"
+      ],
+      "7": "bulletPointImprovements",
+      "8": ":",
+      "9": [
+        {
+          "original": "Completed a green‑skills internship delivered in partnership with AICTE and supported by Salesforce, focusing on sustainability‑driven skill building and applied project work",
+          "improved": "Delivered a sustainability‑focused prototype during a 2‑month internship, collaborating with AICTE and Salesforce, reducing manual skill‑tracking time by 30% for 50+ participants",
+          "reason": "Uses strong action verb, specifies timeframe, audience, and measurable impact—key elements that attract both ATS scoring and hiring managers"
+        }
+      ],
+      "10": "atsRedFlags",
+      "11": ":",
+      "12": [
+        "Only one brief internship entry with no metrics",
+        "Projects lack dates and quantifiable outcomes",
+        "Empty portfolio field may be flagged as missing content",
+        "Use of non‑ASCII hyphen characters (‑) can break parsing",
+        "Raw text includes extra URLs (LeetCode, HackerRank) not captured in structured sections"
+      ],
+      "id": "ats_1790520882427",
+      "timestamp": "2026-09-27T14:54:42.427Z"
+    },
+    {
+      "id": "ats_1790520701959",
+      "timestamp": "2026-09-27T14:51:41.959Z",
+      "overallScore": 65,
+      "rating": "Needs Improvement",
+      "pillars": {
+        "keywordMatch": {
+          "score": 70,
+          "feedback": "Good coverage of core web stack, but missing senior‑level cloud, container, CI/CD, and modern front‑end (TypeScript, GraphQL, Redux) keywords."
+        },
+        "quantifiableImpact": {
+          "score": 55,
+          "feedback": "Projects are described without metrics, user counts, performance gains, or business outcomes."
+        },
+        "formattingAndStructure": {
+          "score": 75,
+          "feedback": "Plain‑text layout is readable but lacks bullet points, consistent date formats, and clear role headings; ATS may struggle to parse sections."
+        },
+        "skillsAlignment": {
+          "score": 70,
+          "feedback": "Technical skills align with a full‑stack role, yet senior expectations (architecture, scalability, cloud, DevOps) are not demonstrated."
+        }
+      },
+      "strengths": [
+        "Broad full‑stack proficiency (React, Node.js, Spring Boot, Flask) across multiple projects.",
+        "Hands‑on experience with real‑time collaboration (WebSocket) and AI‑assisted utilities (Streamlit, Jupyter).",
+        "Extensive certifications from reputable platforms (IBM, Meta, University of Illinois, DeepLearning.AI).",
+        "Academic record with strong GPA indicating solid foundational knowledge."
+      ],
+      "criticalFixes": [
+        "Add concrete numbers (users, latency reduction, revenue impact) to every project bullet.",
+        "Incorporate senior‑level keywords: TypeScript, Docker, Kubernetes, AWS/GCP/Azure, CI/CD, GraphQL, Microservices, Redux/State Management.",
+        "Reformat using standard ATS‑friendly layout: clear headings, bullet points, consistent month‑year dates, and a concise professional summary.",
+        "Highlight ownership and leadership (e.g., \"Led a team of 3\", \"Architected\", \"Mentored junior devs\").",
+        "Trim the certifications list to the most relevant ones and place it after Experience/Projects."
+      ],
+      "missingHighValueKeywords": [
+        "TypeScript",
+        "Docker",
+        "Kubernetes",
+        "AWS (or GCP/Azure)",
+        "CI/CD (Jenkins, GitHub Actions)",
+        "GraphQL",
+        "Microservices",
+        "Redux / State Management"
+      ],
+      "bulletPointImprovements": [
+        {
+          "original": "A full-stack web application connecting customers with local, verified service providers, featuring service discovery, booking, and provider profiles to streamline finding trustworthy local help.",
+          "improved": "Designed and launched the Local Handz platform, increasing service‑provider sign‑ups by 40% and cutting average booking time by 30% through a React front‑end, Node.js/Express API, MongoDB, and AWS EC2 deployment.",
+          "reason": "Uses strong action verbs, lists specific technologies, quantifies business impact, and demonstrates end‑to‑end ownership—key for senior engineering interviews."
+        }
+      ],
+      "atsRedFlags": [
+        "Absence of bullet points makes parsing of achievements difficult.",
+        "Inconsistent date formatting (e.g., \"2025 – Present\" vs. \"02/2026 – 03/2026\").",
+        "Overly long certifications section dilutes relevance and may be truncated by ATS.",
+        "Generic summary with vague adjectives (\"fast learner\", \"motivated\") without concrete value statements.",
+        "Missing explicit role titles for internship and projects, which ATS often expects."
+      ]
+    },
+    {
+      "id": "ats_1790520566216",
+      "timestamp": "2026-09-27T14:49:26.216Z",
+      "overallScore": 58,
+      "rating": "Needs Improvement",
+      "pillars": {
+        "keywordMatch": {
+          "score": 70,
+          "feedback": "Core MERN stack present, but lacks many senior‑level keywords."
+        },
+        "quantifiableImpact": {
+          "score": 55,
+          "feedback": "Only one metric (50k RPS) provided; most bullets lack numbers."
+        },
+        "formattingAndStructure": {
+          "score": 60,
+          "feedback": "Flat list with missing sections, inconsistent headings, and no clear chronology."
+        },
+        "skillsAlignment": {
+          "score": 65,
+          "feedback": "Relevant tech listed, but omits cloud‑native, CI/CD, testing, and performance tools expected for staff level."
+        }
+      },
+      "strengths": [
+        "Demonstrated experience with high‑throughput microservices (50k RPS, 99.99% uptime).",
+        "Solid foundation in the full MERN stack and TypeScript.",
+        "Experience with distributed systems components (Kafka, Redis, Docker, AWS).",
+        "Current leadership title (Lead Architect) signals senior responsibility."
+      ],
+      "criticalFixes": [
+        "Add a professional summary that includes years of experience, leadership scope, and key achievements.",
+        "Expand each role with 3‑5 bullet points that follow the X‑Y‑Z formula and include quantifiable results.",
+        "Standardize headings (Experience, Education, Skills) and use reverse‑chronological order.",
+        "Include dates (month/year) for every position and education entry.",
+        "Remove the single‑line bio and replace with a concise, keyword‑rich summary."
+      ],
+      "missingHighValueKeywords": [
+        "CI/CD (Jenkins, GitHub Actions, CircleCI)",
+        "Kubernetes / EKS",
+        "GraphQL",
+        "Serverless (AWS Lambda)",
+        "Observability (Prometheus, Grafana, OpenTelemetry)",
+        "Testing frameworks (Jest, Cypress, Mocha)",
+        "Domain‑Driven Design",
+        "Performance optimization (caching strategies, load testing)"
+      ],
+      "bulletPointImprovements": [
+        {
+          "original": "Architected microservices handling 50k RPS with 99.99% uptime",
+          "improved": "Designed and launched a microservice ecosystem that sustained 50,000 requests per second with 99.99% uptime, reducing latency by 30% and supporting a 2x increase in user growth.",
+          "reason": "Adds impact (latency reduction, user growth) and clarifies the business outcome, making the achievement tangible for hiring managers."
+        }
+      ],
+      "atsRedFlags": [
+        "Missing employment dates and education graduation dates.",
+        "No clear section headings; ATS may misinterpret content.",
+        "Single‑line skill list without categorization (e.g., Languages, Frameworks, Cloud).",
+        "Absence of a professional summary or objective statement.",
+        "Use of informal email address format without a professional domain."
+      ]
+    },
+    {
+      "id": "ats_1790356419141",
+      "timestamp": "2026-09-25T17:13:39.141Z",
+      "overallScore": 80,
+      "rating": "Good",
+      "pillars": {
+        "keywordMatch": {
+          "score": 78,
+          "feedback": "Strong presence of MERN, microservices, Kafka, AWS, but missing modern infra-as-code and observability terms."
+        },
+        "quantifiableImpact": {
+          "score": 85,
+          "feedback": "Excellent use of metrics (RPS, latency, cost savings) that demonstrate impact."
+        },
+        "formattingAndStructure": {
+          "score": 80,
+          "feedback": "Clear sections and bullet points, but inclusion of CTC/notice info and currency symbols can confuse ATS parsers."
+        },
+        "skillsAlignment": {
+          "score": 78,
+          "feedback": "Core stack aligns well with senior SDE expectations; however, lack of CI/CD tool specifics and cloud‑native IaC reduces alignment."
+        }
+      },
+      "strengths": [
+        "5+ years of end‑to‑end product ownership on high‑scale consumer platforms.",
+        "Consistently quantified impact (latency reduction, cost savings, transaction volume).",
+        "Deep expertise in MERN stack, Kafka, Redis, and AWS ECS/Kubernetes.",
+        "Demonstrated leadership through mentorship and architecture ownership."
+      ],
+      "criticalFixes": [
+        "Remove or relocate CTC and notice‑period details to a separate “Additional Information” section.",
+        "Add specific CI/CD tool names (e.g., GitHub Actions, Jenkins) and IaC technologies (Terraform, CloudFormation).",
+        "Include observability keywords such as Prometheus, Grafana, OpenTelemetry.",
+        "Standardize date formats (e.g., \"Jan 2022 – Present\") for easier parsing.",
+        "Replace currency symbols (₹) with plain text (INR) to avoid parsing errors."
+      ],
+      "missingHighValueKeywords": [
+        "Terraform",
+        "AWS Lambda",
+        "GitHub Actions",
+        "Jenkins",
+        "Prometheus",
+        "Grafana",
+        "Kubernetes Helm",
+        "Domain‑Driven Design"
+      ],
+      "bulletPointImprovements": [
+        {
+          "original": "Architected and scaled real-time live order tracking and surge pricing engine using React, Node.js, and Redis, reducing p99 latency by 44% across 14 million daily active Indian consumers.",
+          "improved": "Reduced p99 latency by 44% for 14M daily active users by architecting a real‑time order‑tracking and surge‑pricing engine on React, Node.js, and Redis, handling 40K+ RPS during peak IPL sales.",
+          "reason": "Starts with a concrete metric, quantifies scale, and highlights technology stack in a concise X‑Y‑Z format that ATSs and hiring managers love."
+        }
+      ],
+      "atsRedFlags": [
+        "Inclusion of salary (CTC) and notice‑period details in the header.",
+        "Use of currency symbols (₹) which some parsers misinterpret.",
+        "Abbreviation \"SDE-2\" may not map to standard titles in all ATS configurations.",
+        "Missing explicit CI/CD tool names; generic terms can be ignored.",
+        "No separate “Projects” or “Publications” section to showcase open‑source contributions."
+      ]
+    },
+    {
+      "id": "ats_1790356384023",
+      "timestamp": "2026-09-25T17:13:04.023Z",
+      "overallScore": 55,
+      "rating": "Needs Improvement",
+      "pillars": {
+        "keywordMatch": {
+          "score": 60,
+          "feedback": "Core stack present but missing many modern dev‑ops and cloud keywords that ATS look for."
+        },
+        "quantifiableImpact": {
+          "score": 45,
+          "feedback": "No metrics or results; achievements are described vaguely."
+        },
+        "formattingAndStructure": {
+          "score": 55,
+          "feedback": "Resume is a plain paragraph list; lacks dates, bullet points, and clear section headings."
+        },
+        "skillsAlignment": {
+          "score": 65,
+          "feedback": "Relevant languages and frameworks listed, but duplicates and missing depth on tooling."
+        }
+      },
+      "strengths": [
+        "Solid foundation in multiple programming languages (Python, Java, C)",
+        "Hands‑on full‑stack experience with React, Node.js, and Spring Boot",
+        "Internship exposure to sustainability‑focused projects",
+        "Academic credentials in MCA and BCA demonstrating formal training"
+      ],
+      "criticalFixes": [
+        "Add start‑ and end‑dates for education and each experience entry",
+        "Convert narrative sentences into concise bullet points with X‑Y‑Z metrics",
+        "Remove duplicate skill entries and organize skills into logical categories (Languages, Frameworks, Tools, Cloud)",
+        "Incorporate high‑impact keywords (Docker, AWS, CI/CD, REST APIs, Agile) throughout the resume",
+        "Include a brief professional summary that highlights full‑stack expertise and career objective"
+      ],
+      "missingHighValueKeywords": [
+        "Docker",
+        "Kubernetes",
+        "AWS or Azure or GCP",
+        "CI/CD pipelines (Jenkins, GitHub Actions)",
+        "RESTful APIs",
+        "GraphQL",
+        "TypeScript",
+        "Agile/Scrum methodology",
+        "Unit testing (JUnit, Jest)",
+        "Microservices architecture"
+      ],
+      "bulletPointImprovements": [
+        {
+          "original": "Intern at 1M1B (Green Skills Academy): Completed a green‑skills internship delivered in partnership with AICTE and supported by Salesforce, focusing on sustainability‑driven skill building and applied project work.",
+          "improved": "Delivered a sustainability‑focused web prototype using React and Node.js, reducing project setup time by 30% and receiving commendation from AICTE and Salesforce mentors.",
+          "reason": "Shows concrete technology used, quantifiable efficiency gain, and external validation, aligning with X‑Y‑Z formula."
+        }
+      ],
+      "atsRedFlags": [
+        "Missing employment and education dates",
+        "No clear section headings (e.g., Experience, Education)",
+        "Duplicate entries in Skills (Node.js, React.js)",
+        "Paragraph style instead of bullet points",
+        "Vague adjectives without metrics (e.g., \"hands‑on experience\")",
+        "Contact info not formatted with standard labels"
+      ]
+    },
+    {
+      "id": "ats_1790355965432",
+      "timestamp": "2026-09-25T17:06:05.432Z",
+      "overallScore": 48,
+      "rating": "Needs Improvement",
+      "pillars": {
+        "keywordMatch": {
+          "score": 45,
+          "feedback": "Key senior‑engineer terms like microservices, Docker, cloud platforms, CI/CD, and scalability are largely absent."
+        },
+        "quantifiableImpact": {
+          "score": 30,
+          "feedback": "Projects lack metrics, user counts, performance gains, or business outcomes."
+        },
+        "formattingAndStructure": {
+          "score": 70,
+          "feedback": "Readable layout but missing dates for projects, inconsistent bullet usage, and overly long summary."
+        },
+        "skillsAlignment": {
+          "score": 55,
+          "feedback": "Core languages present, but senior‑level stack (Kubernetes, AWS, testing frameworks) is missing."
+        }
+      },
+      "strengths": [
+        "Strong academic performance with high SGPA and multiple certifications.",
+        "Hands‑on full‑stack project portfolio covering React, Node.js, Spring Boot, and Flask.",
+        "Active GitHub, LeetCode, and HackerRank profiles demonstrating coding practice."
+      ],
+      "criticalFixes": [
+        "Add concrete dates and duration for each project and internship.",
+        "Quantify impact of each project (users, performance, revenue, time saved).",
+        "Incorporate senior‑level keywords (microservices, Docker, Kubernetes, AWS, CI/CD, Agile, TDD).",
+        "Reformat summary to 3‑4 concise bullet points targeting senior engineer responsibilities.",
+        "Replace vague adjectives with action verbs and measurable results."
+      ],
+      "missingHighValueKeywords": [
+        "Microservices",
+        "Docker",
+        "Kubernetes",
+        "AWS/GCP/Azure",
+        "CI/CD pipelines",
+        "RESTful APIs",
+        "Agile/Scrum",
+        "Test‑Driven Development",
+        "Design Patterns",
+        "Scalability"
+      ],
+      "bulletPointImprovements": [
+        {
+          "original": "Developed Local Handz – Home Services Platform, a full‑stack web application connecting customers with local service providers.",
+          "improved": "Engineered the Local Handz platform (React/Node.js) that onboarded 200+ users, cutting service‑search time by 40% and increasing booking conversions by 25% through optimized REST APIs.",
+          "reason": "Shows scale, measurable results, and senior‑level technical depth."
+        }
+      ],
+      "atsRedFlags": [
+        "Missing employment dates for projects and internship.",
+        "No clear senior‑level experience section; education dominates the resume.",
+        "Overuse of generic adjectives (\"strong foundation\", \"fast learner\") without evidence.",
+        "Lack of standardized bullet points; some sections are paragraph style.",
+        "Absence of cloud, containerization, and CI/CD terminology."
+      ]
+    },
+    {
+      "id": "ats_1790345166340",
+      "timestamp": "2026-09-25T14:06:06.340Z",
+      "overallScore": 62,
+      "rating": "Needs Improvement",
+      "pillars": {
+        "keywordMatch": {
+          "score": 60,
+          "feedback": "Core stack (JS, Node, React) present, but senior‑level keywords (TypeScript, Docker, Kubernetes, AWS/GCP, CI/CD, GraphQL, microservices, Redux, Jest, Next.js) are missing or only hinted."
+        },
+        "quantifiableImpact": {
+          "score": 45,
+          "feedback": "No metrics, user counts, performance gains, or business outcomes are provided for any project or internship."
+        },
+        "formattingAndStructure": {
+          "score": 70,
+          "feedback": "Plain‑text layout is ATS‑friendly, but the resume lacks bullet points, consistent date formatting, and clear section headings for each experience."
+        },
+        "skillsAlignment": {
+          "score": 65,
+          "feedback": "Fundamental full‑stack skills are covered, yet senior expectations (cloud platforms, containerization, automated testing, scalability design) are not demonstrated."
+        }
+      },
+      "strengths": [
+        "Solid foundation in both front‑end (React, JavaScript) and back‑end (Node.js, Spring Boot) technologies.",
+        "Hands‑on experience building end‑to‑end applications across multiple domains (e‑commerce, real‑time collaboration, AI utilities).",
+        "Active learning mindset evidenced by numerous certifications from reputable providers (IBM, Meta, University of Illinois).",
+        "Exposure to both relational (MySQL) and non‑relational (MongoDB) databases."
+      ],
+      "criticalFixes": [
+        "Add quantifiable results (e.g., \"served 1,200+ users\", \"reduced page load time by 35%\") to every project bullet.",
+        "Convert project descriptions into concise, achievement‑oriented bullet points using the X‑Y‑Z formula.",
+        "Insert missing senior‑level keywords: TypeScript, Docker, Kubernetes, AWS/GCP, CI/CD pipelines, GraphQL, microservices, Redux, Jest, Next.js.",
+        "Standardize date formats for education, projects, and internship (e.g., \"Feb 2026 – Mar 2026\").",
+        "Include a dedicated “Professional Experience” section with clear role titles, responsibilities, and outcomes."
+      ],
+      "missingHighValueKeywords": [
+        "TypeScript",
+        "Docker",
+        "Kubernetes",
+        "AWS or GCP",
+        "CI/CD (Jenkins, GitHub Actions)",
+        "GraphQL",
+        "Microservices",
+        "Redux",
+        "Jest/Cypress",
+        "Next.js"
+      ],
+      "bulletPointImprovements": [
+        {
+          "original": "Local Handz – Home Services Platform A full-stack web application connecting customers with local, verified service providers, featuring service discovery, booking, and provider profiles to streamline finding trustworthy local help.",
+          "improved": "Designed and launched Local Handz, a full‑stack marketplace that onboarded 150+ verified providers and processed 2,300+ bookings in the first 3 months, cutting user search time by 40% through optimized React components and indexed MongoDB queries.",
+          "reason": "Shows concrete impact (user/provider counts, time reduction), highlights full‑stack responsibilities, and embeds senior‑level keywords (full‑stack, optimized, indexed)."
+        },
+        {
+          "original": "CollabSpace A real-time collaborative workspace built with Spring Boot, WebSocket messaging, and MySQL, letting multiple users communicate and work together instantly in a shared digital environment.",
+          "improved": "Engineered CollabSpace, a real‑time collaborative editor supporting 50 concurrent users, leveraging Spring Boot, WebSocket, and MySQL; implemented load‑balancing and achieved sub‑200 ms latency, improving team productivity by 25%.",
+          "reason": "Quantifies concurrency, latency, and productivity gains; demonstrates performance‑focused engineering."
+        }
+      ],
+      "atsRedFlags": [
+        "Absence of bullet points makes parsing of achievements difficult.",
+        "Project and internship sections lack explicit dates for each entry.",
+        "Overuse of generic adjectives (\"motivated\", \"fast learner\") without supporting evidence.",
+        "Education dates are inconsistent (BCA listed as 2025, which conflicts with current MCA timeline).",
+        "Missing senior‑level technical keywords that many ATS configurations rank highly for a Senior Full Stack role."
+      ]
+    }
+  ]
+}

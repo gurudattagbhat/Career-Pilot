@@ -1,0 +1,17 @@
+{
+  "name": "job-finder-mern",
+  "version": "1.0.0",
+  "description": "CareerPilot - MERN Stack Job Finder with ATS Resume Doctor and Groq AI",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "concurrently -n \"backend,frontend\" -c \"cyan,magenta\" \"npm run server\" \"npm run client\"",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "render-build": "npm --prefix server install && npm --prefix client install && npm --prefix client run build"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}
