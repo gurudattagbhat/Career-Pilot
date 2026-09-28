@@ -93,7 +93,7 @@ export default function JobFilterSidebar({
               backgroundColor: 'var(--bg-input)',
               border: '1px solid var(--border-subtle)',
               borderRadius: 'var(--radius-md)',
-              fontSize: '0.85rem',
+              fontSize: '16px',
               color: 'var(--text-primary)',
               outline: 'none',
               cursor: 'pointer'
@@ -123,7 +123,7 @@ export default function JobFilterSidebar({
               backgroundColor: 'var(--bg-input)',
               border: '1px solid var(--border-subtle)',
               borderRadius: 'var(--radius-md)',
-              fontSize: '0.85rem',
+              fontSize: '16px',
               color: 'var(--text-primary)',
               outline: 'none',
               cursor: 'pointer'
@@ -182,7 +182,7 @@ export default function JobFilterSidebar({
               backgroundColor: 'var(--bg-input)',
               border: '1px solid var(--border-subtle)',
               borderRadius: 'var(--radius-md)',
-              fontSize: '0.85rem',
+              fontSize: '16px',
               color: 'var(--text-primary)',
               outline: 'none',
               cursor: 'pointer'
@@ -246,7 +246,7 @@ export default function JobFilterSidebar({
               backgroundColor: 'var(--bg-input)',
               border: '1px solid var(--border-subtle)',
               borderRadius: 'var(--radius-md)',
-              fontSize: '0.85rem',
+              fontSize: '16px',
               color: 'var(--text-primary)',
               outline: 'none',
               cursor: 'pointer'
@@ -276,7 +276,7 @@ export default function JobFilterSidebar({
               backgroundColor: 'var(--bg-input)',
               border: '1px solid var(--border-subtle)',
               borderRadius: 'var(--radius-md)',
-              fontSize: '0.85rem',
+              fontSize: '16px',
               color: 'var(--text-primary)',
               outline: 'none',
               cursor: 'pointer'
@@ -287,6 +287,18 @@ export default function JobFilterSidebar({
             <option value="Contract">Contract / C2H</option>
             <option value="Internship">Internship (6 Months / PPO)</option>
           </select>
+        </div>
+
+        {/* Mobile Apply / Dismiss Button */}
+        <div className="mobile-filter-apply-row" style={{ marginTop: '20px', paddingTop: '14px', borderTop: '1px solid var(--border-subtle)' }}>
+          <button
+            type="button"
+            onClick={() => setMobileOpen(false)}
+            className="btn btn-primary"
+            style={{ width: '100%', justifyContent: 'center', padding: '12px', fontWeight: 700, fontSize: '0.92rem' }}
+          >
+            <span>Apply Filters ({totalResults} Jobs)</span>
+          </button>
         </div>
       </div>
       </div>

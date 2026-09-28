@@ -669,33 +669,8 @@ export default function App() {
         onOpenProfile={() => setIsProfileModalOpen(true)}
       />
 
-      {/* Floating Toast Notification */}
-      {toastMessage && (
-        <div style={{
-          position: 'fixed',
-          bottom: '24px',
-          right: '24px',
-          zIndex: 200,
-          backgroundColor: 'var(--bg-elevated)',
-          color: 'var(--text-primary)',
-          border: '1px solid var(--accent-emerald)',
-          borderRadius: 'var(--radius-lg)',
-          padding: '12px 20px',
-          boxShadow: 'var(--shadow-lg)',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '10px',
-          fontSize: '0.9rem',
-          fontWeight: 600,
-          animation: 'fadeIn 0.2s ease forwards'
-        }}>
-          <BookmarkCheck size={18} color="var(--accent-emerald)" />
-          <span>{toastMessage}</span>
-        </div>
-      )}
-
       {/* Main Content Area */}
-      <main className="app-container main-content-wrapper" style={{ flex: 1, paddingBottom: '60px' }}>
+      <main className="app-container main-content-wrapper" style={{ flex: 1 }}>
         {/* TAB 1: FIND JOBS */}
         {activeTab === 'jobs' && (
           <div>

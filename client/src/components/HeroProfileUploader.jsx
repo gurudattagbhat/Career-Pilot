@@ -171,7 +171,7 @@ export default function HeroProfileUploader({
     setUploading(true);
 
     const formData = new FormData();
-    formData.append('resume', file);
+    formData.append('resume', file, file.name || 'resume.pdf');
     formData.append('targetRole', targetRole || 'Software Professional');
 
     try {
@@ -600,8 +600,8 @@ export default function HeroProfileUploader({
                 onChange={(e) => setQuickSkillInput(e.target.value)}
                 placeholder="+ Add another skill to search..."
                 style={{
-                  padding: '5px 10px',
-                  fontSize: '0.78rem',
+                  padding: '6px 10px',
+                  fontSize: '16px',
                   backgroundColor: 'var(--bg-card)',
                   border: '1px solid var(--border-subtle)',
                   borderRadius: 'var(--radius-md)',
@@ -707,8 +707,8 @@ export default function HeroProfileUploader({
               onChange={(e) => setCustomExpInput(e.target.value)}
               placeholder="Or enter custom experience (e.g. 0-2 yrs, 6 months internship, Fresher / SDE-1)..."
               style={{
-                padding: '7px 12px',
-                fontSize: '0.82rem',
+                padding: '8px 12px',
+                fontSize: '16px',
                 backgroundColor: 'var(--bg-card)',
                 border: customExpInput ? '1px solid var(--accent-emerald)' : '1px solid var(--border-subtle)',
                 borderRadius: 'var(--radius-md)',
@@ -999,8 +999,9 @@ export default function HeroProfileUploader({
                 handleFileUpload(e.dataTransfer.files[0]);
               }
             }}
-            onClick={() => fileInputRef.current?.click()}
             style={{
+              position: 'relative',
+              overflow: 'hidden',
               border: `2px dashed ${isDragging ? 'var(--accent-emerald)' : 'var(--border-medium)'}`,
               backgroundColor: isDragging ? 'var(--accent-emerald-soft)' : 'var(--bg-elevated)',
               borderRadius: 'var(--radius-lg)',
@@ -1011,14 +1012,26 @@ export default function HeroProfileUploader({
               marginBottom: '16px'
             }}
           >
+            {/* Directly clickable native file input overlay for guaranteed iOS/Android mobile support */}
             <input
               ref={fileInputRef}
               type="file"
-              accept=".pdf,.docx,.doc,.txt"
-              style={{ display: 'none' }}
+              accept=".pdf,.docx,.doc,.txt,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                opacity: 0,
+                cursor: 'pointer',
+                zIndex: 10
+              }}
               onChange={(e) => {
                 if (e.target.files && e.target.files[0]) {
-                  handleFileUpload(e.target.files[0]);
+                  const selected = e.target.files[0];
+                  e.target.value = '';
+                  handleFileUpload(selected);
                 }
               }}
             />

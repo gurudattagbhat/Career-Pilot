@@ -84,7 +84,7 @@ router.post('/upload', upload.single('resume'), async (req, res) => {
       req.file.originalname
     );
 
-    if (!rawText || rawText.trim().length < 40) {
+    if (!rawText || rawText.trim().length < 20) {
       return res.status(400).json({
         error: 'The uploaded file appears to be empty or unscannable. Please check if it contains readable text or use the manual builder.'
       });

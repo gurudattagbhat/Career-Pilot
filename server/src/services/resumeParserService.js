@@ -28,29 +28,118 @@ const WEAK_CLICHES = [
   'people person', 'fast learner', 'work well under pressure'
 ];
 
+// Stream text fallback for mobile PDFs with XRef or syntax quirks
+function extractPdfStreamText(fileBuffer) {
+  try {
+    const str = fileBuffer.toString('latin1');
+    const textChunks = [];
+
+    // Decode standard (text) Tj operators
+    const tjRegex = /\(([^)]+)\)\s*Tj/g;
+    let match;
+    while ((match = tjRegex.exec(str)) !== null) {
+      const decoded = match[1]
+        .replace(/\\([0-7]{1,3})/g, (_, oct) => String.fromCharCode(parseInt(oct, 8)))
+        .replace(/\\([()nrtbf\\])/g, (_, esc) => {
+          const map = { n: '\n', r: '\r', t: '\t', b: '\b', f: '\f', '(': '(', ')': ')', '\\': '\\' };
+          return map[esc] || esc;
+        });
+      if (decoded.trim()) textChunks.push(decoded);
+    }
+
+    // Decode [(text) 10 (text)] TJ array operators
+    const tjArrayRegex = /\[([^\]]+)\]\s*TJ/g;
+    while ((match = tjArrayRegex.exec(str)) !== null) {
+      const inner = match[1];
+      const subMatches = inner.match(/\(([^)]+)\)/g);
+      if (subMatches) {
+        textChunks.push(subMatches.map(s => s.slice(1, -1)).join(' '));
+      }
+    }
+
+    // Decode hex strings <48656c6c6f> Tj
+    const hexTjRegex = /<([0-9a-fA-F]+)>\s*Tj/g;
+    while ((match = hexTjRegex.exec(str)) !== null) {
+      const hex = match[1];
+      let decoded = '';
+      for (let i = 0; i < hex.length; i += 2) {
+        decoded += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+      }
+      if (decoded.trim()) textChunks.push(decoded);
+    }
+
+    // Printable word sequences fallback if structured operators were sparse
+    if (textChunks.length < 5) {
+      const rawMatches = str.match(/[\w\s@.+\-–,():\/]{5,}/g);
+      if (rawMatches) {
+        const filtered = rawMatches
+          .map(s => s.trim())
+          .filter(s => s.length > 3 && !s.startsWith('/') && !s.includes('endobj') && !s.includes('xref') && !s.includes('stream') && !s.includes('Linearized'));
+        return Array.from(new Set(filtered)).join(' ');
+      }
+    }
+
+    return textChunks.join(' ');
+  } catch (err) {
+    console.warn('PDF stream fallback note:', err.message);
+    return '';
+  }
+}
+
+// Clean mobile whitespace, non-breaking spaces and soft hyphens
+function cleanMobileText(text) {
+  if (!text) return '';
+  return text
+    .replace(/[\u0000-\u0008\u000B-\u000C\u000E-\u001F\u007F-\u009F\u00AD\u200B-\u200D\uFEFF]/g, '')
+    .replace(/[\u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]/g, ' ')
+    .replace(/\r\n/g, '\n')
+    .replace(/[ \t]+/g, ' ')
+    .trim();
+}
+
 export const resumeParserService = {
   async extractText(fileBuffer, mimeType, originalName = '') {
     const ext = originalName.split('.').pop()?.toLowerCase();
     
-    if (mimeType === 'application/pdf' || ext === 'pdf') {
+    // Check magic bytes header to guarantee detection on mobile devices
+    const isPdf = (mimeType && mimeType.includes('pdf')) ||
+                  ext === 'pdf' ||
+                  (fileBuffer && fileBuffer.length >= 4 && fileBuffer[0] === 0x25 && fileBuffer[1] === 0x50 && fileBuffer[2] === 0x44 && fileBuffer[3] === 0x46); // %PDF
+
+    const isDocx = (mimeType && (mimeType.includes('word') || mimeType.includes('officedocument'))) ||
+                   ext === 'docx' || ext === 'doc' ||
+                   (fileBuffer && fileBuffer.length >= 4 && fileBuffer[0] === 0x50 && fileBuffer[1] === 0x4B && fileBuffer[2] === 0x03 && fileBuffer[3] === 0x04); // PK..
+
+    if (isPdf) {
+      let extractedText = '';
       try {
         const data = await pdfParse(fileBuffer);
-        return data.text || '';
+        extractedText = (data && data.text) ? data.text : '';
       } catch (err) {
-        console.error('PDF Parse error:', err);
-        throw new Error('Unable to extract text from this PDF. Please check if it is password-protected or scanned as an image.');
+        console.warn('pdf-parse standard engine error (often mobile PDF xref quirk):', err.message);
       }
+
+      // If standard pdf-parse failed or returned sparse text, execute stream text fallback
+      if (!extractedText || extractedText.trim().length < 30) {
+        console.log('📱 Extracting mobile PDF stream text via fallback engine...');
+        const streamText = extractPdfStreamText(fileBuffer);
+        if (streamText && streamText.trim().length > extractedText.trim().length) {
+          extractedText = streamText;
+        }
+      }
+
+      const cleaned = cleanMobileText(extractedText);
+      if (cleaned.length >= 25) {
+        return cleaned;
+      }
+
+      throw new Error('Unable to extract text from this PDF. Please verify it contains digital selectable text (not a photo/scan) or use the Manual Entry tab.');
     }
 
-    if (
-      mimeType === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' ||
-      mimeType === 'application/msword' ||
-      ext === 'docx' ||
-      ext === 'doc'
-    ) {
+    if (isDocx) {
       try {
         const result = await mammoth.extractRawText({ buffer: fileBuffer });
-        return result.value || '';
+        return cleanMobileText(result.value || '');
       } catch (err) {
         console.error('DOCX Parse error:', err);
         throw new Error('Unable to extract text from this Word document.');
@@ -58,7 +147,7 @@ export const resumeParserService = {
     }
 
     // Default to plain text
-    return fileBuffer.toString('utf-8');
+    return cleanMobileText(fileBuffer.toString('utf-8'));
   },
 
   // Fallback rule-based parsing if Groq API key is not provided or fails

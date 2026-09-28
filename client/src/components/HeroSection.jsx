@@ -157,7 +157,7 @@ export default function HeroSection({
                 backgroundColor: 'var(--bg-input)',
                 border: '1px solid var(--border-subtle)',
                 borderRadius: 'var(--radius-lg)',
-                fontSize: '0.95rem',
+                fontSize: '16px',
                 outline: 'none'
               }}
             />
@@ -181,17 +181,17 @@ export default function HeroSection({
                 backgroundColor: 'var(--bg-input)',
                 border: '1px solid var(--border-subtle)',
                 borderRadius: 'var(--radius-lg)',
-                fontSize: '0.95rem',
+                fontSize: '16px',
                 outline: 'none'
               }}
             />
           </div>
 
           {/* Action Search Button */}
-          <div style={{ display: 'flex', gap: '8px' }}>
+          <div className="hero-search-btn-group" style={{ display: 'flex', gap: '8px' }}>
             <button
               type="submit"
-              className="btn btn-primary"
+              className="btn btn-primary hero-search-submit"
               style={{ padding: '14px 22px', borderRadius: 'var(--radius-lg)', whiteSpace: 'nowrap', gap: '8px' }}
             >
               <Sparkles size={17} />
@@ -203,7 +203,7 @@ export default function HeroSection({
               disabled={refreshing}
               className="btn btn-secondary"
               title="Force live re-scrape from LinkedIn India & Indian portals"
-              style={{ padding: '14px 16px', borderRadius: 'var(--radius-lg)' }}
+              style={{ padding: '14px 16px', borderRadius: 'var(--radius-lg)', flexShrink: 0 }}
             >
               <RefreshCw size={17} className={refreshing ? 'spin-animation' : ''} />
             </button>

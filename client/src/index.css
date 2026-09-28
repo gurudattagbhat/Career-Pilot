@@ -87,6 +87,14 @@
   padding: 0;
 }
 
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--bg-app);
@@ -96,7 +104,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
   transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+#root {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -122,6 +142,7 @@ button {
 input, textarea, select {
   font-family: var(--font-sans);
   color: var(--text-primary);
+  font-size: 16px !important; /* Critical to prevent iOS Safari auto-zoom */
 }
 
 /* Layout Utilities */
@@ -541,7 +562,36 @@ input, textarea, select {
   }
 
   .main-content-wrapper {
-    padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+    padding-bottom: calc(105px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  .sidebar-collapsible-wrapper {
+    padding-bottom: 24px;
+  }
+
+  /* Compact Native-Feel Site Header on Mobile */
+  .site-header {
+    height: 58px;
+  }
+
+  .site-header-inner {
+    height: 58px !important;
+    padding: 0 12px !important;
+    gap: 8px !important;
+  }
+
+  .nav-brand-title {
+    font-size: 1.05rem !important;
+  }
+
+  .nav-brand-icon {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 8px !important;
+  }
+
+  .nav-brand-subtitle {
+    display: none !important;
   }
 
   /* Fixed Mobile Bottom Navigation Bar */
@@ -551,7 +601,7 @@ input, textarea, select {
     bottom: 0;
     left: 0;
     right: 0;
-    height: calc(62px + env(safe-area-inset-bottom, 0px));
+    height: calc(58px + env(safe-area-inset-bottom, 0px));
     padding-bottom: env(safe-area-inset-bottom, 0px);
     background-color: var(--bg-card);
     backdrop-filter: blur(20px);
@@ -563,12 +613,20 @@ input, textarea, select {
     box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.35);
   }
 
+  /* Hide bottom nav bar when virtual keyboard opens so it never covers form fields */
+  @media (max-height: 520px) {
+    .mobile-bottom-nav {
+      display: none !important;
+    }
+  }
+
   .mobile-nav-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex: 1;
+    min-width: 0;
     height: 100%;
     color: var(--text-muted);
     font-size: 0.68rem;
@@ -581,6 +639,10 @@ input, textarea, select {
     -webkit-tap-highlight-color: transparent;
     transition: all 0.15s ease;
     position: relative;
+    padding: 0 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .mobile-nav-item:active {
@@ -620,8 +682,15 @@ input, textarea, select {
     gap: 10px;
   }
 
-  .hero-search-form button[type="submit"] {
+  .hero-search-btn-group {
+    display: flex;
+    gap: 8px;
     width: 100%;
+  }
+
+  .hero-search-submit {
+    flex: 1;
+    min-width: 0;
     justify-content: center;
     padding: 13px;
     font-size: 0.95rem;
@@ -753,7 +822,7 @@ input, textarea, select {
 
   /* Floating Components Responsive Positioning */
   .floating-toast {
-    bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+    bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
     left: 16px !important;
     right: 16px !important;
     justify-content: center !important;
@@ -763,7 +832,7 @@ input, textarea, select {
   }
 
   .floating-scroll-top {
-    bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+    bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
     right: 16px !important;
     width: 42px !important;
     height: 42px !important;
@@ -806,13 +875,17 @@ input, textarea, select {
   }
 
   /* Compact Navbar for narrow mobile viewports */
+  .nav-user-name {
+    display: none !important;
+  }
+
   .nav-btn-signup {
     display: none !important;
   }
 
   .nav-auth-buttons .nav-btn-login {
-    padding: 7px 12px;
-    font-size: 0.82rem;
+    padding: 6px 10px;
+    font-size: 0.8rem;
   }
 
   .modal-dialog {

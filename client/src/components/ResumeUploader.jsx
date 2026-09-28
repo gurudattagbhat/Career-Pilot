@@ -51,12 +51,13 @@ export default function ResumeUploader({
 
   const handleFileChange = async (file) => {
     if (!file) return;
-    setFileName(file.name);
+    const resolvedName = file.name || 'resume.pdf';
+    setFileName(resolvedName);
     setError(null);
     setUploading(true);
 
     const formData = new FormData();
-    formData.append('resume', file);
+    formData.append('resume', file, resolvedName);
     formData.append('targetRole', targetRole || 'Software Professional');
 
     try {
@@ -169,6 +170,8 @@ export default function ResumeUploader({
         }}
         onClick={() => fileInputRef.current?.click()}
         style={{
+          position: 'relative',
+          overflow: 'hidden',
           border: `2px dashed ${isDragging ? 'var(--accent-emerald)' : 'var(--border-medium)'}`,
           backgroundColor: isDragging ? 'var(--accent-emerald-soft)' : 'var(--bg-elevated)',
           borderRadius: 'var(--radius-lg)',
@@ -182,11 +185,20 @@ export default function ResumeUploader({
         <input
           ref={fileInputRef}
           type="file"
-          accept=".pdf,.docx,.doc,.txt"
-          style={{ display: 'none' }}
+          accept=".pdf,.docx,.doc,.txt,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            opacity: 0,
+            cursor: 'pointer',
+            zIndex: 10
+          }}
           onChange={(e) => {
             if (e.target.files && e.target.files[0]) {
               handleFileChange(e.target.files[0]);
+              e.target.value = '';
             }
           }}
         />

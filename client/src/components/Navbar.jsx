@@ -43,63 +43,66 @@ export default function Navbar({
   }, []);
   return (
     <>
-      <header style={{
-      position: 'sticky',
-      top: 0,
-      zIndex: 50,
-      backdropFilter: 'blur(12px)',
-      backgroundColor: theme === 'dark' ? 'rgba(14, 17, 20, 0.88)' : 'rgba(247, 248, 250, 0.92)',
-      borderBottom: '1px solid var(--border-subtle)',
-      transition: 'all 0.2s ease'
-    }}>
-      <div className="app-container" style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        height: '70px',
-        gap: '16px'
+      <header className="site-header" style={{
+        position: 'sticky',
+        top: 0,
+        zIndex: 100,
+        backdropFilter: 'blur(12px)',
+        backgroundColor: theme === 'dark' ? 'rgba(14, 17, 20, 0.94)' : 'rgba(247, 248, 250, 0.96)',
+        borderBottom: '1px solid var(--border-subtle)',
+        transition: 'all 0.2s ease'
       }}>
-        {/* Brand Logo */}
-        <div 
-          onClick={() => setActiveTab('jobs')}
-          style={{ 
-            display: 'flex', 
-            alignItems: 'center', 
-            gap: '12px', 
-            cursor: 'pointer',
-            userSelect: 'none'
-          }}
-        >
-          <div style={{
-            width: '38px',
-            height: '38px',
-            borderRadius: '10px',
-            backgroundColor: 'var(--accent-emerald)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#fff',
-            boxShadow: '0 4px 14px var(--accent-emerald-glow)'
-          }}>
-            <Briefcase size={20} strokeWidth={2.4} />
-          </div>
-          <div>
-            <div style={{ 
+        <div className="app-container site-header-inner" style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '12px'
+        }}>
+          {/* Brand Logo */}
+          <div 
+            onClick={() => setActiveTab('jobs')}
+            className="nav-brand"
+            style={{ 
               display: 'flex', 
               alignItems: 'center', 
-              gap: '6px',
-              fontFamily: 'var(--font-display)',
-              fontWeight: 800,
-              fontSize: '1.25rem',
-              letterSpacing: '-0.03em'
+              gap: '10px', 
+              cursor: 'pointer',
+              userSelect: 'none',
+              flexShrink: 0
+            }}
+          >
+            <div className="nav-brand-icon" style={{
+              width: '36px',
+              height: '36px',
+              borderRadius: '10px',
+              backgroundColor: 'var(--accent-emerald)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#fff',
+              boxShadow: '0 4px 14px var(--accent-emerald-glow)',
+              flexShrink: 0
             }}>
-              CareerPilot <span style={{ color: 'var(--accent-emerald)', fontSize: '0.9rem', fontWeight: 600 }}>PRO</span>
+              <Briefcase size={18} strokeWidth={2.4} />
             </div>
-            <div className="nav-brand-subtitle" style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '-3px' }}>
-              Multi-Source Job Engine & ATS Doctor
+            <div>
+              <div className="nav-brand-title" style={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: '6px',
+                fontFamily: 'var(--font-display)',
+                fontWeight: 800,
+                fontSize: '1.2rem',
+                letterSpacing: '-0.03em',
+                lineHeight: 1.1
+              }}>
+                CareerPilot <span style={{ color: 'var(--accent-emerald)', fontSize: '0.85rem', fontWeight: 600 }}>PRO</span>
+              </div>
+              <div className="nav-brand-subtitle" style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '-1px' }}>
+                Multi-Source Job Engine & ATS Doctor
+              </div>
             </div>
           </div>
-        </div>
 
         {/* Navigation Tabs (Desktop) */}
         <nav className="desktop-nav-tabs" style={{
@@ -268,7 +271,7 @@ export default function Navbar({
                   {currentUser.fullName ? currentUser.fullName.charAt(0) : 'U'}
                 </div>
 
-                <div style={{ textAlign: 'left', lineHeight: 1.1 }}>
+                <div className="nav-user-name" style={{ textAlign: 'left', lineHeight: 1.1 }}>
                   <div style={{ fontSize: '0.8rem', fontWeight: 700, maxWidth: '110px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                     {currentUser.fullName || 'User'}
                   </div>
@@ -280,18 +283,19 @@ export default function Navbar({
               {/* User Dropdown Menu */}
               {userDropdownOpen && (
                 <div 
-                  className="card animate-fade-in"
+                  className="card animate-fade-in nav-user-dropdown"
                   style={{
                     position: 'absolute',
                     top: 'calc(100% + 8px)',
                     right: 0,
                     width: '240px',
+                    maxWidth: 'calc(100vw - 24px)',
                     padding: '8px',
                     borderRadius: 'var(--radius-lg)',
                     boxShadow: '0 15px 35px rgba(0, 0, 0, 0.4)',
                     border: '1px solid var(--border-medium)',
                     backgroundColor: 'var(--bg-card)',
-                    zIndex: 60
+                    zIndex: 200
                   }}
                 >
                   {/* User Info Header */}
