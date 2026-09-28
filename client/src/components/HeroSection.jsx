@@ -138,12 +138,7 @@ export default function HeroSection({
         border: '1px solid var(--border-medium)',
         boxShadow: 'var(--shadow-lg)'
       }}>
-        <form onSubmit={handleSubmit} style={{
-          display: 'grid',
-          gridTemplateColumns: '1.2fr 1fr auto',
-          gap: '10px',
-          alignItems: 'center'
-        }}>
+        <form onSubmit={handleSubmit} className="hero-search-form">
           {/* Keyword Search */}
           <div style={{
             position: 'relative',
@@ -287,13 +282,9 @@ export default function HeroSection({
         })()}
 
         {/* Quick Tag Filters */}
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px',
+        <div className="popular-tags-container" style={{
           marginTop: '12px',
-          padding: '4px 6px',
-          flexWrap: 'wrap'
+          padding: '4px 6px'
         }}>
           <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 600 }}>Hubs & Skills:</span>
           {popularTags.map(tag => {

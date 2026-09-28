@@ -1,5 +1,5 @@
-import React from 'react';
-import { Filter, DollarSign, Globe, Briefcase, Award, Layers, RotateCcw, ArrowUpDown, MapPin } from 'lucide-react';
+import React, { useState } from 'react';
+import { Filter, DollarSign, Globe, Briefcase, Award, Layers, RotateCcw, ArrowUpDown, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
 
 export default function JobFilterSidebar({
   filters,
@@ -7,15 +7,60 @@ export default function JobFilterSidebar({
   onResetFilters,
   totalResults = 0
 }) {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const activeCount = [
+    Boolean(filters.city),
+    Boolean(filters.jobType),
+    Boolean(filters.experienceLevel),
+    Boolean(filters.minLpa > 0),
+    Boolean(filters.source),
+    Boolean(filters.remoteOnly),
+    Boolean(filters.sortBy && filters.sortBy !== 'date_newest')
+  ].filter(Boolean).length;
+
   return (
-    <aside style={{
-      width: '100%',
-      maxWidth: '300px',
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '20px'
-    }}>
-      <div className="card" style={{ padding: '20px', borderRadius: 'var(--radius-lg)' }}>
+    <aside style={{ width: '100%' }}>
+      {/* Mobile Toggle Bar (< 900px) */}
+      <div className="mobile-filter-bar">
+        <button
+          type="button"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          className="btn btn-secondary btn-sm"
+          style={{ gap: '8px', fontSize: '0.85rem', flex: 1, justifyContent: 'space-between' }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <Filter size={15} color="var(--accent-emerald)" />
+            <span style={{ fontWeight: 600 }}>Filters & Sort</span>
+            {activeCount > 0 && (
+              <span className="badge badge-emerald" style={{ padding: '1px 6px', fontSize: '0.68rem' }}>
+                {activeCount} active
+              </span>
+            )}
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '0.78rem', color: 'var(--text-muted)' }}>
+            <span>{mobileOpen ? 'Hide' : 'Show'}</span>
+            {mobileOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+          </div>
+        </button>
+
+        {activeCount > 0 && (
+          <button
+            type="button"
+            onClick={onResetFilters}
+            className="btn btn-secondary btn-sm"
+            style={{ padding: '6px 10px', fontSize: '0.75rem', gap: '4px' }}
+            title="Reset all filters"
+          >
+            <RotateCcw size={13} />
+            <span>Reset</span>
+          </button>
+        )}
+      </div>
+
+      {/* Main Sidebar Card (Collapsible on Mobile, Persistent on Desktop) */}
+      <div className={`sidebar-collapsible-wrapper ${!mobileOpen ? 'collapsed' : ''}`} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+        <div className="card" style={{ padding: '20px', borderRadius: 'var(--radius-lg)' }}>
         {/* Header */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 700, fontSize: '1rem' }}>
@@ -243,6 +288,7 @@ export default function JobFilterSidebar({
             <option value="Internship">Internship (6 Months / PPO)</option>
           </select>
         </div>
+      </div>
       </div>
     </aside>
   );

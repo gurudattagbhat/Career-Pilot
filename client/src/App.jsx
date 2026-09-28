@@ -679,7 +679,7 @@ export default function App() {
       )}
 
       {/* Main Content Area */}
-      <main className="app-container" style={{ flex: 1, paddingBottom: '60px' }}>
+      <main className="app-container main-content-wrapper" style={{ flex: 1, paddingBottom: '60px' }}>
         {/* TAB 1: FIND JOBS */}
         {activeTab === 'jobs' && (
           <div>
@@ -706,12 +706,7 @@ export default function App() {
             />
 
             {/* Layout: Filter Sidebar + Job Cards Grid */}
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'minmax(260px, 280px) 1fr',
-              gap: '28px',
-              alignItems: 'flex-start'
-            }}>
+            <div className="jobs-layout-grid">
               {/* Sidebar */}
               <JobFilterSidebar
                 filters={filters}
@@ -856,12 +851,7 @@ export default function App() {
                       </div>
                     )}
 
-                    <div style={{
-                      display: 'grid',
-                      gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
-                      gap: '18px',
-                      marginBottom: '28px'
-                    }}>
+                    <div className="jobs-cards-grid">
                       {jobs.map(job => (
                         <JobCard
                           key={job.id}
@@ -1039,11 +1029,7 @@ export default function App() {
                 </button>
               </div>
             ) : (
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
-                gap: '18px'
-              }}>
+              <div className="jobs-cards-grid">
                 {savedJobs.map(job => (
                   <JobCard
                     key={job.id}

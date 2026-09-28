@@ -104,7 +104,7 @@ export default function AtsScoreCard({
         position: 'relative',
         overflow: 'hidden'
       }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr auto', gap: '32px', alignItems: 'center' }}>
+        <div className="ats-main-header-grid">
           {/* Radial Circular Score Gauge */}
           <div 
             onClick={handleTriggerConfetti}
@@ -253,7 +253,7 @@ export default function AtsScoreCard({
       </div>
 
       {/* Fixes and Strengths Side-by-Side */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginBottom: '24px' }}>
+      <div className="ats-fixes-strengths-grid">
         {/* Critical Fixes Box */}
         <div className="card" style={{ borderLeft: '4px solid var(--accent-rose)', padding: '22px' }}>
           <h3 style={{ fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px', color: 'var(--accent-rose)' }}>

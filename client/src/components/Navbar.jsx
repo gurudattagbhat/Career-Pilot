@@ -42,7 +42,8 @@ export default function Navbar({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
   return (
-    <header style={{
+    <>
+      <header style={{
       position: 'sticky',
       top: 0,
       zIndex: 50,
@@ -100,8 +101,8 @@ export default function Navbar({
           </div>
         </div>
 
-        {/* Navigation Tabs */}
-        <nav style={{
+        {/* Navigation Tabs (Desktop) */}
+        <nav className="desktop-nav-tabs" style={{
           display: 'flex',
           alignItems: 'center',
           gap: '4px',
@@ -180,10 +181,10 @@ export default function Navbar({
 
         {/* Right Controls */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          {/* Saved bookmarks count button */}
+          {/* Saved bookmarks count button (Desktop Header) */}
           <button 
             onClick={() => setActiveTab('saved')}
-            className="btn btn-secondary btn-sm" 
+            className="btn btn-secondary btn-sm desktop-only" 
             title="Saved Jobs"
             style={{
               position: 'relative',
@@ -410,5 +411,74 @@ export default function Navbar({
         </div>
       </div>
     </header>
+
+      {/* Sleek Mobile Bottom Navigation Bar (Phones & Tablets) */}
+      <nav className="mobile-bottom-nav" aria-label="Mobile Navigation">
+        <button
+          type="button"
+          onClick={() => setActiveTab('jobs')}
+          className={`mobile-nav-item ${activeTab === 'jobs' ? 'active' : ''}`}
+          aria-label="Find Jobs"
+        >
+          <Briefcase size={19} />
+          <span>Jobs</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveTab('ats')}
+          className={`mobile-nav-item ${activeTab === 'ats' ? 'active' : ''}`}
+          aria-label="ATS Resume Doctor"
+        >
+          <div style={{ position: 'relative', display: 'inline-flex' }}>
+            <FileCheck2 size={19} />
+            {atsScore !== null && (
+              <span className="mobile-nav-badge">{atsScore}</span>
+            )}
+          </div>
+          <span>ATS</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveTab('profile')}
+          className={`mobile-nav-item ${activeTab === 'profile' ? 'active' : ''}`}
+          aria-label="Profile Builder"
+        >
+          <UserPen size={19} />
+          <span>Profile</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveTab('tracker')}
+          className={`mobile-nav-item ${activeTab === 'tracker' ? 'active' : ''}`}
+          aria-label="Application Tracker"
+        >
+          <div style={{ position: 'relative', display: 'inline-flex' }}>
+            <Kanban size={19} />
+            {applicationCount > 0 && (
+              <span className="mobile-nav-badge">{applicationCount}</span>
+            )}
+          </div>
+          <span>Tracker</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveTab('saved')}
+          className={`mobile-nav-item ${activeTab === 'saved' ? 'active' : ''}`}
+          aria-label="Saved Bookmarks"
+        >
+          <div style={{ position: 'relative', display: 'inline-flex' }}>
+            <Bookmark size={19} />
+            {savedCount > 0 && (
+              <span className="mobile-nav-badge">{savedCount}</span>
+            )}
+          </div>
+          <span>Saved</span>
+        </button>
+      </nav>
+    </>
   );
 }
