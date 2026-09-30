@@ -37,7 +37,7 @@ export default function HeroSection({
     }}>
       <div style={{ maxWidth: '880px', margin: '0 auto', textAlign: 'center', marginBottom: '32px' }}>
         {/* Live Aggregation Pill */}
-        <div style={{
+        <div className="hero-live-pill" style={{
           display: 'inline-flex',
           alignItems: 'center',
           gap: '8px',
@@ -45,38 +45,47 @@ export default function HeroSection({
           backgroundColor: 'var(--accent-emerald-soft)',
           border: '1px solid rgba(16, 185, 129, 0.3)',
           borderRadius: 'var(--radius-full)',
-          marginBottom: '16px'
+          marginBottom: '16px',
+          maxWidth: '100%',
+          boxSizing: 'border-box'
         }}>
-          <span className="pulse-dot"></span>
-          <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--accent-emerald)', letterSpacing: '0.02em' }}>
+          <span className="pulse-dot" style={{ flexShrink: 0 }}></span>
+          <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--accent-emerald)', letterSpacing: '0.02em', wordBreak: 'break-word', textAlign: 'center' }}>
             🇮🇳 INDIA TECH CAREER AGGREGATOR • NAUKRI • LINKEDIN INDIA • INSTAHYRE
           </span>
         </div>
 
         {/* Main Headline */}
         <h1 style={{
-          fontSize: 'clamp(2.1rem, 4.5vw, 3.4rem)',
+          fontSize: 'clamp(1.65rem, 5vw, 3.4rem)',
           fontWeight: 800,
-          lineHeight: 1.15,
+          lineHeight: 1.18,
           marginBottom: '14px',
-          letterSpacing: '-0.03em'
+          letterSpacing: '-0.03em',
+          wordBreak: 'break-word',
+          overflowWrap: 'break-word',
+          maxWidth: '100%'
         }}>
           Find Top Tech Jobs in India. <br />
           <span style={{
             background: 'linear-gradient(135deg, var(--accent-emerald) 0%, #34d399 100%)',
             WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent'
+            WebkitTextFillColor: 'transparent',
+            display: 'inline-block',
+            maxWidth: '100%'
           }}>
             Beat ATS Screens & Maximize Your CTC.
           </span>
         </h1>
 
         <p style={{
-          fontSize: 'clamp(0.95rem, 1.8vw, 1.15rem)',
+          fontSize: 'clamp(0.9rem, 2.5vw, 1.15rem)',
           color: 'var(--text-secondary)',
           lineHeight: 1.6,
           maxWidth: '680px',
-          margin: '0 auto'
+          margin: '0 auto',
+          padding: '0 8px',
+          wordBreak: 'break-word'
         }}>
           Explore verified openings at top tech companies and global enterprises with direct application links to live career portals.
         </p>
@@ -313,15 +322,16 @@ export default function HeroSection({
       </div>
 
       {/* Stats Counter */}
-      <div style={{
+      <div className="hero-stats-counter" style={{
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        gap: '32px',
+        gap: '24px',
         marginTop: '24px',
         fontSize: '0.85rem',
         color: 'var(--text-muted)',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        textAlign: 'center'
       }}>
         <div>
           <strong style={{ color: 'var(--text-primary)' }}>{totalJobs}</strong> Live Openings

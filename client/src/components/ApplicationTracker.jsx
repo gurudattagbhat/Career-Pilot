@@ -171,7 +171,7 @@ export default function ApplicationTracker({
                 gap: '16px'
               }}
             >
-              <div className="tracker-app-info" style={{ display: 'flex', alignItems: 'center', gap: '16px', minWidth: 0, flex: '1 1 auto' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', minWidth: '280px' }}>
                 <div style={{
                   width: '46px',
                   height: '46px',

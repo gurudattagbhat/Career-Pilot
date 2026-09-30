@@ -403,13 +403,18 @@ export default function AuthModal({
       overflowY: 'auto'
     }}>
       <div 
-        className="card animate-fade-in auth-modal-dialog"
+        className="card animate-fade-in"
         style={{
+          width: '100%',
+          maxWidth: '880px',
           maxHeight: '92vh',
           backgroundColor: 'var(--bg-card)',
           borderRadius: 'var(--radius-2xl)',
           border: '1px solid var(--border-medium)',
           boxShadow: '0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 30px rgba(16, 185, 129, 0.1)',
+          display: 'grid',
+          gridTemplateColumns: 'minmax(300px, 360px) 1fr',
+          overflow: 'hidden',
           position: 'relative'
         }}
       >
@@ -439,7 +444,16 @@ export default function AuthModal({
         </button>
 
         {/* LEFT BRAND & GRAPHIC SHOWCASE COLUMN */}
-        <div className="auth-graphic-col">
+        <div style={{
+          backgroundColor: 'var(--bg-elevated)',
+          borderRight: '1px solid var(--border-subtle)',
+          padding: '40px 32px',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          position: 'relative',
+          overflow: 'hidden'
+        }}>
           {/* Subtle Background Glow Accent */}
           <div style={{
             position: 'absolute',
@@ -520,7 +534,13 @@ export default function AuthModal({
         </div>
 
         {/* RIGHT INTERACTIVE FORM COLUMN */}
-        <div className="auth-form-col">
+        <div style={{
+          padding: '40px 36px',
+          overflowY: 'auto',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center'
+        }}>
           {/* Alerts */}
           {errorMsg && (
             <div style={{
@@ -812,7 +832,7 @@ export default function AuthModal({
                 </div>
 
                 {/* Email Address & Mobile Grid */}
-                <div className="auth-2col-row">
+                <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '12px', marginBottom: '14px' }}>
                   <div>
                     <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '5px' }}>
                       Email Address *
@@ -866,7 +886,7 @@ export default function AuthModal({
                 </div>
 
                 {/* Target Role & CTC Grid */}
-                <div className="auth-2col-row">
+                <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '12px', marginBottom: '14px' }}>
                   <div>
                     <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '5px' }}>
                       Target Role / Domain
@@ -1057,7 +1077,12 @@ export default function AuthModal({
 
               <form onSubmit={handleVerifySignupOtp}>
                 {/* 6 Discrete Digit Boxes */}
-                <div className="otp-boxes-container">
+                <div style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  gap: '10px',
+                  marginBottom: '24px'
+                }}>
                   {otpDigits.map((digit, index) => (
                     <input
                       key={index}
@@ -1068,10 +1093,19 @@ export default function AuthModal({
                       value={digit}
                       onChange={(e) => handleOtpChange(index, e.target.value)}
                       onKeyDown={(e) => handleOtpKeyDown(index, e)}
-                      className="otp-digit-box"
                       style={{
+                        width: '46px',
+                        height: '54px',
+                        textAlign: 'center',
+                        fontSize: '1.4rem',
+                        fontWeight: 800,
+                        backgroundColor: 'var(--bg-input)',
                         border: digit ? '2px solid var(--accent-emerald)' : '1px solid var(--border-medium)',
-                        boxShadow: digit ? '0 0 12px rgba(16, 185, 129, 0.25)' : 'none'
+                        borderRadius: 'var(--radius-lg)',
+                        color: 'var(--text-primary)',
+                        outline: 'none',
+                        boxShadow: digit ? '0 0 12px rgba(16, 185, 129, 0.25)' : 'none',
+                        transition: 'all 0.15s ease'
                       }}
                     />
                   ))}

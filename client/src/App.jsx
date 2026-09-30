@@ -653,7 +653,7 @@ export default function App() {
   };
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', width: '100%', maxWidth: '100vw', overflowX: 'hidden' }}>
       {/* Top Navbar */}
       <Navbar
         activeTab={activeTab}
@@ -670,10 +670,10 @@ export default function App() {
       />
 
       {/* Main Content Area */}
-      <main className="app-container main-content-wrapper" style={{ flex: 1 }}>
+      <main className="app-container main-content-wrapper" style={{ flex: 1, width: '100%', maxWidth: '100%', minWidth: 0, boxSizing: 'border-box' }}>
         {/* TAB 1: FIND JOBS */}
         {activeTab === 'jobs' && (
-          <div>
+          <div style={{ width: '100%', maxWidth: '100%', minWidth: 0 }}>
             <HeroSection
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}

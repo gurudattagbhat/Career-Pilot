@@ -194,12 +194,12 @@ export default function JobCard({
             )}
           </div>
 
-          <div>
+          <div style={{ minWidth: 0, flex: 1, wordBreak: 'break-word' }}>
             <div style={{ fontSize: '0.88rem', fontWeight: 600, color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '4px' }}>
-              <Building2 size={14} />
-              <span>{job.company}</span>
+              <Building2 size={14} style={{ flexShrink: 0 }} />
+              <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{job.company}</span>
             </div>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 700, lineHeight: 1.3, marginTop: '2px', color: 'var(--text-primary)' }}>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 700, lineHeight: 1.3, marginTop: '2px', color: 'var(--text-primary)', wordBreak: 'break-word' }}>
               {job.title}
             </h3>
           </div>

@@ -355,7 +355,7 @@ export default function HeroProfileUploader({
     };
 
     return (
-      <div className="card" style={{
+      <div className="card hero-profile-card" style={{
         maxWidth: '960px',
         margin: '0 auto 28px auto',
         padding: '24px',
@@ -363,21 +363,25 @@ export default function HeroProfileUploader({
         backgroundColor: 'var(--bg-card)',
         border: '1px solid rgba(16, 185, 129, 0.4)',
         boxShadow: '0 8px 30px rgba(0, 0, 0, 0.25)',
-        position: 'relative'
+        position: 'relative',
+        boxSizing: 'border-box',
+        width: '100%',
+        overflow: 'hidden'
       }}>
         {/* Top Candidate Row */}
-        <div style={{
+        <div className="hero-candidate-header" style={{
           display: 'flex',
           alignItems: 'flex-start',
           justifyContent: 'space-between',
-          gap: '16px',
+          gap: '14px',
           flexWrap: 'wrap',
           marginBottom: '16px',
           paddingBottom: '14px',
-          borderBottom: '1px solid var(--border-subtle)'
+          borderBottom: '1px solid var(--border-subtle)',
+          width: '100%'
         }}>
-          <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+          <div style={{ minWidth: 0, flex: '1 1 260px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px', flexWrap: 'wrap' }}>
               <span className="pulse-dot"></span>
               <span style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--accent-emerald)', letterSpacing: '0.04em' }}>
                 ACTIVE PROFILE LOADED & SCANNED
@@ -389,7 +393,7 @@ export default function HeroProfileUploader({
               )}
             </div>
 
-            <h3 style={{ fontSize: '1.35rem', fontWeight: 800, margin: '0 0 4px 0' }}>
+            <h3 style={{ fontSize: '1.35rem', fontWeight: 800, margin: '0 0 4px 0', wordBreak: 'break-word' }}>
               {candidateName}
             </h3>
 
@@ -403,9 +407,9 @@ export default function HeroProfileUploader({
               {educationItem && (
                 <>
                   <span>•</span>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                    <GraduationCap size={13} color="var(--accent-emerald)" />
-                    {educationItem.degree} {educationItem.institution ? `(${educationItem.institution})` : ''}
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', wordBreak: 'break-word' }}>
+                    <GraduationCap size={13} color="var(--accent-emerald)" style={{ flexShrink: 0 }} />
+                    <span>{educationItem.degree} {educationItem.institution ? `(${educationItem.institution})` : ''}</span>
                   </span>
                 </>
               )}
@@ -413,7 +417,7 @@ export default function HeroProfileUploader({
           </div>
 
           {/* Quick links */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <div className="hero-candidate-actions" style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
             <button
               type="button"
               onClick={onOpenCustomization}
@@ -432,7 +436,8 @@ export default function HeroProfileUploader({
                 color: 'var(--text-muted)',
                 fontSize: '0.78rem',
                 cursor: 'pointer',
-                textDecoration: 'underline'
+                textDecoration: 'underline',
+                padding: '4px'
               }}
             >
               Re-upload / Edit
@@ -455,12 +460,15 @@ export default function HeroProfileUploader({
             </span>
 
             {/* 3 Mode Switcher Pills */}
-            <div style={{
-              display: 'inline-flex',
+            <div className="hero-strategy-switcher" style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '4px',
               padding: '3px',
               backgroundColor: 'var(--bg-input)',
               borderRadius: 'var(--radius-md)',
-              border: '1px solid var(--border-subtle)'
+              border: '1px solid var(--border-subtle)',
+              maxWidth: '100%'
             }}>
               <button
                 type="button"
@@ -469,7 +477,7 @@ export default function HeroProfileUploader({
                   setCardSelectedSkills([...cardSkillsList]);
                 }}
                 style={{
-                  padding: '5px 12px',
+                  padding: '6px 12px',
                   borderRadius: 'var(--radius-sm)',
                   fontSize: '0.78rem',
                   fontWeight: 600,
@@ -477,7 +485,9 @@ export default function HeroProfileUploader({
                   color: heroSearchMode === 'all_skills' ? '#ffffff' : 'var(--text-secondary)',
                   border: 'none',
                   cursor: 'pointer',
-                  transition: 'all 0.15s ease'
+                  transition: 'all 0.15s ease',
+                  flex: '1 1 auto',
+                  textAlign: 'center'
                 }}
               >
                 🛠️ All Resume Skills ({cardSkillsList.length})
@@ -487,7 +497,7 @@ export default function HeroProfileUploader({
                 type="button"
                 onClick={() => setHeroSearchMode('custom_skills')}
                 style={{
-                  padding: '5px 12px',
+                  padding: '6px 12px',
                   borderRadius: 'var(--radius-sm)',
                   fontSize: '0.78rem',
                   fontWeight: 600,
@@ -495,7 +505,9 @@ export default function HeroProfileUploader({
                   color: heroSearchMode === 'custom_skills' ? '#ffffff' : 'var(--text-secondary)',
                   border: 'none',
                   cursor: 'pointer',
-                  transition: 'all 0.15s ease'
+                  transition: 'all 0.15s ease',
+                  flex: '1 1 auto',
+                  textAlign: 'center'
                 }}
               >
                 ✏️ Selected Skills ({cardSelectedSkills.length})
@@ -505,7 +517,7 @@ export default function HeroProfileUploader({
                 type="button"
                 onClick={() => setHeroSearchMode('role')}
                 style={{
-                  padding: '5px 12px',
+                  padding: '6px 12px',
                   borderRadius: 'var(--radius-sm)',
                   fontSize: '0.78rem',
                   fontWeight: 600,
@@ -513,7 +525,9 @@ export default function HeroProfileUploader({
                   color: heroSearchMode === 'role' ? '#ffffff' : 'var(--text-secondary)',
                   border: 'none',
                   cursor: 'pointer',
-                  transition: 'all 0.15s ease'
+                  transition: 'all 0.15s ease',
+                  flex: '1 1 auto',
+                  textAlign: 'center'
                 }}
               >
                 🎯 By Target Role
@@ -828,31 +842,36 @@ export default function HeroProfileUploader({
         </div>
 
         {/* BOTTOM ACTION BUTTONS */}
-        <div style={{
+        <div className="hero-profile-actions" style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
           flexWrap: 'wrap',
-          gap: '12px'
+          gap: '12px',
+          width: '100%'
         }}>
-          <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+          <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', maxWidth: '100%', wordBreak: 'break-word' }}>
             ⚡ Scrapes live verified openings from <strong>{selectedPlatforms.length === ALL_PLATFORMS.length ? 'all 8 platforms' : selectedPlatforms.join(', ')}</strong>
           </div>
 
-          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+          <div className="hero-scrape-btn-group" style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', width: '100%' }}>
             <button
               type="button"
               onClick={handleExecuteScrape}
-              className="btn btn-primary"
+              className="btn btn-primary hero-scrape-main-btn"
               style={{
                 gap: '8px',
-                padding: '12px 22px',
+                padding: '12px 18px',
                 fontSize: '0.9rem',
                 fontWeight: 700,
-                boxShadow: '0 4px 14px rgba(16, 185, 129, 0.35)'
+                boxShadow: '0 4px 14px rgba(16, 185, 129, 0.35)',
+                whiteSpace: 'normal',
+                textAlign: 'center',
+                lineHeight: 1.35,
+                flex: '1 1 auto'
               }}
             >
-              <Sparkles size={16} />
+              <Sparkles size={16} style={{ flexShrink: 0 }} />
               <span>
                 {`Scrape ${(customExpInput || heroExperienceLevel)} Jobs`}
                 {heroSearchMode === 'all_skills' ? ` on All ${cardSkillsList.length} Skills` : heroSearchMode === 'custom_skills' ? ` on ${cardSelectedSkills.length} Selected Skills` : ` for "${roleHeadline}"`}
@@ -865,11 +884,12 @@ export default function HeroProfileUploader({
             <button
               type="button"
               onClick={onOpenCustomization}
-              className="btn btn-secondary"
+              className="btn btn-secondary hero-scrape-secondary-btn"
               style={{
                 gap: '6px',
                 padding: '12px 16px',
-                fontSize: '0.86rem'
+                fontSize: '0.86rem',
+                whiteSpace: 'nowrap'
               }}
             >
               <Sliders size={15} color="var(--accent-emerald)" />
@@ -1192,7 +1212,7 @@ export default function HeroProfileUploader({
               <span>Education Details</span>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr 90px', gap: '10px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '10px' }}>
               <input
                 type="text"
                 value={manualDegree}

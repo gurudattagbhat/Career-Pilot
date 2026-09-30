@@ -4,16 +4,6 @@
  * are strictly customized and persisted to the logged-in user's MongoDB Atlas account.
  */
 
-const API_BASE_URL = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '');
-
-export function getFullApiUrl(url) {
-  if (url.startsWith('http://') || url.startsWith('https://')) {
-    return url;
-  }
-  const cleanUrl = url.startsWith('/') ? url : `/${url}`;
-  return API_BASE_URL ? `${API_BASE_URL}${cleanUrl}` : cleanUrl;
-}
-
 export function getAuthToken() {
   try {
     return localStorage.getItem('jobfinder_auth_token') || '';
@@ -32,7 +22,7 @@ export async function apiFetch(url, options = {}) {
     headers['Authorization'] = `Bearer ${token}`;
   }
 
-  return fetch(getFullApiUrl(url), {
+  return fetch(url, {
     ...options,
     headers
   });
